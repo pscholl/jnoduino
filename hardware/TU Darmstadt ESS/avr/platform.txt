@@ -73,7 +73,7 @@ tools.dfuprogrammer.cmd.path.windows={runtime.hardware.path}/tools/dfuprog.bat
 # This if for the ususal uploading
 tools.dfuprogrammer.upload.params.verbose=--debug 5
 tools.dfuprogrammer.upload.params.quiet=--quiet
-tools.dfuprogrammer.upload.pattern="{cmd.path}" {build.mcu} flash {upload.verbose} "{build.path}/{build.project_name}.hex"
+tools.dfuprogrammer.upload.pattern="{cmd.path}" {build.mcu} {upload.verbose} "{build.path}/{build.project_name}.hex"
 
 # Those are for uploading with a programmer
 tools.dfuprogrammer.program.params.verbose=--debug 5
