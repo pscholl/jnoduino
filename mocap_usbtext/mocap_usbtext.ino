@@ -4,16 +4,13 @@
 #include <LSM9DS0.h>
 
 LSM9DS0 sen;
-boolean connection=false;
-unsigned long time=0;
 
 void setup() {
   Serial.begin(115200);
   while (!Serial)
     ; // wait until somebody is there
 
-  connection = sen.testConnection();
-  Serial.println(  connection  ? "OK" : "FAILED");
+  Serial.println(  sen.testConnection() ? "OK" : "FAILED");
 
   sen.setGyroFullScale(2000);
   sen.setGyroOutputDataRate(LSM9DS0_RATE_95);
@@ -30,6 +27,7 @@ void setup() {
 
 #define p(x) Serial.print(x)
 
+unsigned long time=0;
 void loop() {
   if (!connection)
     return;
