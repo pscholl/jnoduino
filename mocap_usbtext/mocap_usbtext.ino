@@ -17,9 +17,8 @@ void setup() {
 
   sen.setGyroFullScale(2000);
   sen.setGyroOutputDataRate(LSM9DS0_RATE_95);
-  sen.setGyroBandwidthCutOffMode(LSM9DS0_BW_HIGH);
+  sen.setGyroBandwidthCutOffMode(LSM9DS0_BW_LOW);
   sen.setGyroDataFilter(LSM9DS0_LOW_PASS);
-  sen.setFIFOEnabled(false);
 
   sen.setAccRate(LSM9DS0_ACC_RATE_100);
   sen.setAccFullScale(LSM9DS0_ACC_2G);
@@ -49,6 +48,7 @@ void loop() {
      o->q0 = 1;
      o->q1 = o->q2 = o->q3 = 0;
      o->exInt = o->eyInt = o->ezInt = 0;
+
 
 //     p(m.gx);p("\t");p(m.gy);p("\t");p(m.gz);p("\t");
 //     p(m.ax);p("\t");p(m.ay);p("\t");p(m.az);p("\t");
