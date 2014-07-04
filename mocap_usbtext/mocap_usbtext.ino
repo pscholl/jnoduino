@@ -12,7 +12,6 @@ void setup() {
   while (!Serial)
     ; // wait until somebody is there
 
-  sen.initialize();
   connection = sen.testConnection();
   Serial.println(  connection  ? "OK" : "FAILED");
 
@@ -43,7 +42,7 @@ void loop() {
    orientation_t *o =
        AHRSupdate(m.gx, m.gy, m.gz,
                   m.ax, m.ay, m.az,
-                  m.mx, m.my, m.mz,
+                  m.mx, m.my, -m.mz,
                   time/1e6);
                   
    if (isnan(o->q0)) { // let's reset
