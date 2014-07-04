@@ -29,19 +29,16 @@ void setup() {
 
 unsigned long time=0;
 void loop() {
-  if (!connection)
-    return;
-
    time = micros();
    measurement_t m = sen.getMeasurement();
    time = micros() - time;
-   
+
    orientation_t *o =
        AHRSupdate(m.gx, m.gy, m.gz,
                   m.ax, m.ay, m.az,
                   m.mx, m.my, -m.mz,
                   time/1e6);
-                  
+
    if (isnan(o->q0)) { // let's reset
      o->q0 = 1;
      o->q1 = o->q2 = o->q3 = 0;
@@ -54,7 +51,7 @@ void loop() {
 
      return;
    }
-   
+
    p(o->q0); p("\t");
    p(o->q1); p("\t");
    p(o->q2); p("\t");
