@@ -1,3 +1,0 @@
-[submodule "hardware/TU Darmstadt ESS/avr/libraries"]
-	path = hardware/TU Darmstadt ESS/avr/libraries
-	url = git@github.com:pscholl/i2cdevlib.git

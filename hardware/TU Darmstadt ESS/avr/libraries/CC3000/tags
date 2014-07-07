@@ -1,0 +1,985 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ACCEPT_ADDRESS__OFFSET	utility/evnt_handler.cpp	83;"	d	file:
+ACCEPT_RETURN_STATUS_OFFSET	utility/evnt_handler.cpp	82;"	d	file:
+ACCEPT_SD_OFFSET	utility/evnt_handler.cpp	81;"	d	file:
+ADAFRUIT_CC3000_H	Adafruit_CC3000.h	21;"	d
+ADAFRUIT_CC3000_SERVER_H	Adafruit_CC3000_Server.h	23;"	d
+AES128_KEY_SIZE	utility/security.h	51;"	d
+AF_INET	utility/socket.h	69;"	d
+AF_INET6	utility/socket.h	70;"	d
+ARRAY_TO_STREAM	utility/cc3000_common.h	364;"	d
+ASIC_ADDR_LEN	utility/socket.h	120;"	d
+Adafruit_CC3000	Adafruit_CC3000.cpp	/^Adafruit_CC3000::Adafruit_CC3000(uint8_t csPin, uint8_t irqPin, uint8_t vbatPin, uint8_t SPIspeed)$/;"	f	class:Adafruit_CC3000
+Adafruit_CC3000	Adafruit_CC3000.h	/^class Adafruit_CC3000 {$/;"	c
+Adafruit_CC3000_Client	Adafruit_CC3000.cpp	/^Adafruit_CC3000_Client::Adafruit_CC3000_Client(const Adafruit_CC3000_Client& copy) {$/;"	f	class:Adafruit_CC3000_Client
+Adafruit_CC3000_Client	Adafruit_CC3000.cpp	/^Adafruit_CC3000_Client::Adafruit_CC3000_Client(uint16_t s) {$/;"	f	class:Adafruit_CC3000_Client
+Adafruit_CC3000_Client	Adafruit_CC3000.cpp	/^Adafruit_CC3000_Client::Adafruit_CC3000_Client(void) {$/;"	f	class:Adafruit_CC3000_Client
+Adafruit_CC3000_Client	Adafruit_CC3000.h	/^class Adafruit_CC3000_Client : public Print {$/;"	c
+Adafruit_CC3000_ClientRef	Adafruit_CC3000_Server.cpp	/^Adafruit_CC3000_ClientRef::Adafruit_CC3000_ClientRef(Adafruit_CC3000_Client* client)$/;"	f	class:Adafruit_CC3000_ClientRef
+Adafruit_CC3000_ClientRef	Adafruit_CC3000_Server.h	/^class Adafruit_CC3000_ClientRef : public Print {$/;"	c
+Adafruit_CC3000_Server	Adafruit_CC3000_Server.cpp	/^Adafruit_CC3000_Server::Adafruit_CC3000_Server(uint16_t port)$/;"	f	class:Adafruit_CC3000_Server
+Adafruit_CC3000_Server	Adafruit_CC3000_Server.h	/^class Adafruit_CC3000_Server : public Server {$/;"	c
+AddNTPtime	utility/sntp.cpp	/^uint8_t AddNTPtime(SNTP_Timestamp_t* time1, SNTP_Timestamp_t* time2)$/;"	f
+BASE_YEAR	utility/sntp.cpp	36;"	d	file:
+BSD_RECV_FROM_FROMLEN_OFFSET	utility/evnt_handler.h	140;"	d
+BSD_RECV_FROM_FROM_OFFSET	utility/evnt_handler.h	141;"	d
+BSD_RSP_PARAMS_SOCKET_OFFSET	utility/evnt_handler.cpp	75;"	d	file:
+BSD_RSP_PARAMS_STATUS_OFFSET	utility/evnt_handler.cpp	76;"	d	file:
+CC3000BitSet	Adafruit_CC3000.cpp	/^class CC3000BitSet {$/;"	c	file:
+CC3000_ASSERT_CS	ccspi.cpp	117;"	d	file:
+CC3000_BUFFER_MAGIC_NUMBER	ccspi.cpp	157;"	d	file:
+CC3000_DEASSERT_CS	ccspi.cpp	121;"	d	file:
+CC3000_MAXIMAL_RX_SIZE	utility/cc3000_common.h	116;"	d
+CC3000_MAXIMAL_TX_SIZE	utility/cc3000_common.h	138;"	d
+CC3000_MINIMAL_RX_SIZE	utility/cc3000_common.h	115;"	d
+CC3000_MINIMAL_TX_SIZE	utility/cc3000_common.h	137;"	d
+CC3000_RX_BUFFER_SIZE	utility/cc3000_common.h	157;"	d
+CC3000_RX_BUFFER_SIZE	utility/cc3000_common.h	162;"	d
+CC3000_SUCCESS	Adafruit_CC3000.cpp	102;"	d	file:
+CC3000_TX_BUFFER_SIZE	utility/cc3000_common.h	158;"	d
+CC3000_TX_BUFFER_SIZE	utility/cc3000_common.h	163;"	d
+CC3000_UsynchCallback	Adafruit_CC3000.cpp	/^void CC3000_UsynchCallback(long lEventType, char * data, unsigned char length)$/;"	f
+CC3KPrinter	Adafruit_CC3000.cpp	/^Print* CC3KPrinter; \/\/ user specified output stream for general messages and debug$/;"	v
+CC3K_PRINTLN_F	Adafruit_CC3000_Server.cpp	19;"	d	file:
+CHECK_PRINTER	Adafruit_CC3000.h	43;"	d
+CHECK_PRINTER	Adafruit_CC3000.h	45;"	d
+CHECK_SUCCESS	Adafruit_CC3000.cpp	103;"	d	file:
+DEBUG	utility/PinChangeInt.h	113;"	d
+DEBUGPRINT	utility/debug.cpp	/^void DEBUGPRINT(const prog_char *fstr)$/;"	f
+DEBUGPRINT_DEC	utility/debug.h	53;"	d
+DEBUGPRINT_DEC	utility/debug.h	59;"	d
+DEBUGPRINT_DEC16	utility/debug.h	54;"	d
+DEBUGPRINT_DEC16	utility/debug.h	60;"	d
+DEBUGPRINT_F	utility/debug.h	52;"	d
+DEBUGPRINT_F	utility/debug.h	58;"	d
+DEBUGPRINT_HEX	utility/debug.h	55;"	d
+DEBUGPRINT_HEX	utility/debug.h	61;"	d
+DEBUGPRINT_HEX16	utility/debug.h	56;"	d
+DEBUGPRINT_HEX16	utility/debug.h	62;"	d
+DEBUG_MODE	utility/debug.h	34;"	d
+DRIVER_VERSION_NUMBER	utility/host_driver_version.h	38;"	d
+DiffNTPtime	utility/sntp.cpp	/^uint8_t DiffNTPtime(SNTP_Timestamp_t* time1, SNTP_Timestamp_t* time2)$/;"	f
+EERROR	utility/cc3000_common.h	68;"	d
+EFAIL	utility/cc3000_common.h	67;"	d
+ENOBUFS	utility/socket.h	114;"	d
+ENOBUFS	utility/socket.h	116;"	d
+ERROR_SOCKET_INACTIVE	utility/cc3000_common.h	73;"	d
+ESUCCESS	utility/cc3000_common.h	66;"	d
+ETH_ALEN	utility/wlan.cpp	76;"	d	file:
+ExtractNTPTime	utility/sntp.cpp	/^NetTime_t *sntp::ExtractNTPTime(\/*in*\/ SNTP_Timestamp_t *ntpTime, \/*out*\/ NetTime_t *extractedTime)$/;"	f	class:sntp
+FD_CLR	utility/socket.h	183;"	d
+FD_CLR	utility/socket.h	192;"	d
+FD_ISSET	utility/socket.h	186;"	d
+FD_ISSET	utility/socket.h	193;"	d
+FD_SET	utility/socket.h	180;"	d
+FD_SET	utility/socket.h	191;"	d
+FD_ZERO	utility/socket.h	189;"	d
+FD_ZERO	utility/socket.h	194;"	d
+FIX_PT_DAYS_YEAR	utility/sntp.cpp	38;"	d	file:
+FLASHIFY	utility/debug.h	46;"	d
+FLOW_CONTROL_EVENT_BLOCK_MODE_OFFSET	utility/evnt_handler.cpp	71;"	d	file:
+FLOW_CONTROL_EVENT_FREE_BUFFS_OFFSET	utility/evnt_handler.cpp	72;"	d	file:
+FLOW_CONTROL_EVENT_HANDLE_OFFSET	utility/evnt_handler.cpp	70;"	d	file:
+FLOW_CONTROL_EVENT_SIZE	utility/evnt_handler.cpp	73;"	d	file:
+GCC_VERSION	utility/debug.h	26;"	d
+GET_HOST_BY_NAME_ADDR_OFFSET	utility/evnt_handler.cpp	79;"	d	file:
+GET_HOST_BY_NAME_RETVAL_OFFSET	utility/evnt_handler.cpp	78;"	d	file:
+GET_SCAN_RESULTS_FRAME_TIME_OFFSET	utility/evnt_handler.cpp	118;"	d	file:
+GET_SCAN_RESULTS_ISVALID_TO_SSIDLEN_OFFSET	utility/evnt_handler.cpp	117;"	d	file:
+GET_SCAN_RESULTS_SCANRESULT_STATUS_OFFSET	utility/evnt_handler.cpp	116;"	d	file:
+GET_SCAN_RESULTS_SSID_MAC_LENGTH	utility/evnt_handler.cpp	119;"	d	file:
+GET_SCAN_RESULTS_TABlE_COUNT_OFFSET	utility/evnt_handler.cpp	115;"	d	file:
+GetNTPServerList	utility/sntp.cpp	/^char sntp::GetNTPServerList(const char** ntp_pool_list, uint32_t* addrBuffer, int maxServerCount)$/;"	f	class:sntp
+GetSystemClockAsNTPTime	utility/sntp.cpp	/^int sntp::GetSystemClockAsNTPTime(SNTP_Timestamp_t* ntpSystemTime) $/;"	f	class:sntp
+HANDLE_NULL	Adafruit_CC3000_Server.cpp	21;"	d	file:
+HCI_CMND_ACCEPT	utility/hci.h	103;"	d
+HCI_CMND_BIND	utility/hci.h	101;"	d
+HCI_CMND_BSD_SELECT	utility/hci.h	106;"	d
+HCI_CMND_CLOSE_SOCKET	utility/hci.h	109;"	d
+HCI_CMND_CONNECT	utility/hci.h	105;"	d
+HCI_CMND_EVENT_MASK	utility/hci.h	91;"	d
+HCI_CMND_GETHOSTNAME	utility/hci.h	111;"	d
+HCI_CMND_GETSOCKOPT	utility/hci.h	108;"	d
+HCI_CMND_LISTEN	utility/hci.h	104;"	d
+HCI_CMND_MDNS_ADVERTISE	utility/hci.h	112;"	d
+HCI_CMND_NETAPP_BASE	utility/hci.h	136;"	d
+HCI_CMND_NVMEM_CBASE	utility/hci.h	123;"	d
+HCI_CMND_NVMEM_CREATE_ENTRY	utility/hci.h	126;"	d
+HCI_CMND_NVMEM_READ	utility/hci.h	128;"	d
+HCI_CMND_NVMEM_SWAP_ENTRY	utility/hci.h	127;"	d
+HCI_CMND_NVMEM_WRITE	utility/hci.h	129;"	d
+HCI_CMND_NVMEM_WRITE_PATCH	utility/hci.h	130;"	d
+HCI_CMND_READ_BUFFER_SIZE	utility/hci.h	133;"	d
+HCI_CMND_READ_SP_VERSION	utility/hci.h	131;"	d
+HCI_CMND_RECV	utility/hci.h	102;"	d
+HCI_CMND_RECVFROM	utility/hci.h	110;"	d
+HCI_CMND_SEND	utility/hci.h	117;"	d
+HCI_CMND_SENDTO	utility/hci.h	118;"	d
+HCI_CMND_SEND_ARG_LENGTH	utility/socket.cpp	94;"	d	file:
+HCI_CMND_SETSOCKOPT	utility/hci.h	107;"	d
+HCI_CMND_SIMPLE_LINK_START	utility/hci.h	134;"	d
+HCI_CMND_SOCKET	utility/hci.h	100;"	d
+HCI_CMND_SOCKET_BASE	utility/hci.h	99;"	d
+HCI_CMND_WLAN_BASE	utility/hci.h	83;"	d
+HCI_CMND_WLAN_CONFIGURE_PATCH	utility/hci.h	96;"	d
+HCI_CMND_WLAN_CONNECT	utility/hci.h	84;"	d
+HCI_CMND_WLAN_DISCONNECT	utility/hci.h	85;"	d
+HCI_CMND_WLAN_IOCTL_ADD_PROFILE	utility/hci.h	88;"	d
+HCI_CMND_WLAN_IOCTL_DEL_PROFILE	utility/hci.h	89;"	d
+HCI_CMND_WLAN_IOCTL_GET_SCAN_RESULTS	utility/hci.h	90;"	d
+HCI_CMND_WLAN_IOCTL_SET_CONNECTION_POLICY	utility/hci.h	87;"	d
+HCI_CMND_WLAN_IOCTL_SET_SCANPARAM	utility/hci.h	86;"	d
+HCI_CMND_WLAN_IOCTL_SIMPLE_CONFIG_SET_PREFIX	utility/hci.h	95;"	d
+HCI_CMND_WLAN_IOCTL_SIMPLE_CONFIG_START	utility/hci.h	93;"	d
+HCI_CMND_WLAN_IOCTL_SIMPLE_CONFIG_STOP	utility/hci.h	94;"	d
+HCI_CMND_WLAN_IOCTL_STATUSGET	utility/hci.h	92;"	d
+HCI_DATA_BASE	utility/hci.h	115;"	d
+HCI_DATA_BSD_RECV	utility/hci.h	120;"	d
+HCI_DATA_BSD_RECVFROM	utility/hci.h	119;"	d
+HCI_DATA_CMD_HEADER_SIZE	utility/hci.h	229;"	d
+HCI_DATA_HEADER_SIZE	utility/hci.h	227;"	d
+HCI_DATA_LENGTH_OFFSET	utility/hci.h	240;"	d
+HCI_DATA_NVMEM	utility/hci.h	217;"	d
+HCI_DATA_RECV	utility/hci.h	216;"	d
+HCI_DATA_RECVFROM	utility/hci.h	215;"	d
+HCI_EVENT_CC3000_CAN_SHUT_DOWN	utility/hci.h	219;"	d
+HCI_EVENT_HEADER_SIZE	utility/hci.h	228;"	d
+HCI_EVENT_LENGTH_OFFSET	utility/hci.h	238;"	d
+HCI_EVENT_OPCODE_OFFSET	utility/hci.h	237;"	d
+HCI_EVENT_PATCHES_BOOTLOAD_REQ	utility/hci.h	80;"	d
+HCI_EVENT_PATCHES_DRV_REQ	utility/hci.h	78;"	d
+HCI_EVENT_PATCHES_FW_REQ	utility/hci.h	79;"	d
+HCI_EVENT_STATUS_OFFSET	utility/hci.h	239;"	d
+HCI_EVNT_ACCEPT	utility/hci.h	168;"	d
+HCI_EVNT_BIND	utility/hci.h	166;"	d
+HCI_EVNT_BSD_GETHOSTBYNAME	utility/hci.h	176;"	d
+HCI_EVNT_BSD_TCP_CLOSE_WAIT	utility/hci.h	197;"	d
+HCI_EVNT_CLOSE_SOCKET	utility/hci.h	172;"	d
+HCI_EVNT_CONNECT	utility/hci.h	170;"	d
+HCI_EVNT_DATA_UNSOL_FREE_BUFF	utility/hci.h	199;"	d
+HCI_EVNT_GETSOCKOPT	utility/hci.h	175;"	d
+HCI_EVNT_INPROGRESS	utility/hci.h	212;"	d
+HCI_EVNT_LISTEN	utility/hci.h	169;"	d
+HCI_EVNT_MDNS_ADVERTISE	utility/hci.h	177;"	d
+HCI_EVNT_NVMEM_CREATE_ENTRY	utility/hci.h	202;"	d
+HCI_EVNT_NVMEM_READ	utility/hci.h	206;"	d
+HCI_EVNT_NVMEM_SWAP_ENTRY	utility/hci.h	204;"	d
+HCI_EVNT_NVMEM_WRITE	utility/hci.h	207;"	d
+HCI_EVNT_PATCHES_REQ	utility/hci.h	183;"	d
+HCI_EVNT_READ_SP_VERSION	utility/hci.h	209;"	d
+HCI_EVNT_RECV	utility/hci.h	167;"	d
+HCI_EVNT_RECVFROM	utility/hci.h	173;"	d
+HCI_EVNT_SELECT	utility/hci.h	171;"	d
+HCI_EVNT_SEND	utility/hci.h	179;"	d
+HCI_EVNT_SENDTO	utility/hci.h	181;"	d
+HCI_EVNT_SETSOCKOPT	utility/hci.h	174;"	d
+HCI_EVNT_SOCKET	utility/hci.h	165;"	d
+HCI_EVNT_UNSOL_BASE	utility/hci.h	185;"	d
+HCI_EVNT_WLAN_ASYNC_PING_REPORT	utility/hci.h	194;"	d
+HCI_EVNT_WLAN_ASYNC_SIMPLE_CONFIG_DONE	utility/hci.h	195;"	d
+HCI_EVNT_WLAN_BASE	utility/hci.h	157;"	d
+HCI_EVNT_WLAN_CONNECT	utility/hci.h	158;"	d
+HCI_EVNT_WLAN_DISCONNECT	utility/hci.h	159;"	d
+HCI_EVNT_WLAN_IOCTL_ADD_PROFILE	utility/hci.h	161;"	d
+HCI_EVNT_WLAN_KEEPALIVE	utility/hci.h	196;"	d
+HCI_EVNT_WLAN_TX_COMPLETE	utility/hci.h	192;"	d
+HCI_EVNT_WLAN_UNSOL_BASE	utility/hci.h	187;"	d
+HCI_EVNT_WLAN_UNSOL_CONNECT	utility/hci.h	189;"	d
+HCI_EVNT_WLAN_UNSOL_DHCP	utility/hci.h	193;"	d
+HCI_EVNT_WLAN_UNSOL_DISCONNECT	utility/hci.h	190;"	d
+HCI_EVNT_WLAN_UNSOL_INIT	utility/hci.h	191;"	d
+HCI_EVNT_WRITE	utility/hci.h	180;"	d
+HCI_NETAPP_ARP_FLUSH	utility/hci.h	143;"	d
+HCI_NETAPP_DHCP	utility/hci.h	138;"	d
+HCI_NETAPP_IPCONFIG	utility/hci.h	142;"	d
+HCI_NETAPP_PING_REPORT	utility/hci.h	140;"	d
+HCI_NETAPP_PING_SEND	utility/hci.h	139;"	d
+HCI_NETAPP_PING_STOP	utility/hci.h	141;"	d
+HCI_NETAPP_SET_DEBUG_LEVEL	utility/hci.h	144;"	d
+HCI_NETAPP_SET_TIMERS	utility/hci.h	145;"	d
+HCI_PACKET_ARGSIZE_OFFSET	utility/hci.h	233;"	d
+HCI_PACKET_LENGTH_OFFSET	utility/hci.h	234;"	d
+HCI_PACKET_TYPE_OFFSET	utility/hci.h	232;"	d
+HCI_PATCH_HEADER_SIZE	utility/hci.h	230;"	d
+HCI_TYPE_CMND	utility/hci.h	72;"	d
+HCI_TYPE_DATA	utility/hci.h	73;"	d
+HCI_TYPE_EVNT	utility/hci.h	75;"	d
+HCI_TYPE_PATCH	utility/hci.h	74;"	d
+HEADERS_SIZE_CMD	utility/hci.h	61;"	d
+HEADERS_SIZE_DATA	utility/socket.cpp	99;"	d	file:
+HEADERS_SIZE_EVNT	ccspi.cpp	61;"	d	file:
+HI	ccspi.cpp	59;"	d	file:
+HOSTNAME_MAX_LENGTH	utility/socket.h	65;"	d
+HasDHCP	Adafruit_CC3000.cpp	/^  static const byte HasDHCP = 0x04;$/;"	m	class:CC3000BitSet	file:
+HostFlowControlConsumeBuff	utility/socket.cpp	/^HostFlowControlConsumeBuff(int sd)$/;"	f
+INLINE_PCINT	utility/PinChangeInt.h	128;"	d
+INLINE_PCINT	utility/PinChangeInt.h	129;"	d
+INLINE_PCINT	utility/PinChangeInt.h	140;"	d
+INLINE_PCINT	utility/PinChangeInt.h	155;"	d
+IOCTL_SOCKET_EVENTMASK	utility/socket.h	111;"	d
+IP2U32	Adafruit_CC3000.cpp	/^uint32_t Adafruit_CC3000::IP2U32(uint8_t a, uint8_t b, uint8_t c, uint8_t d) {$/;"	f	class:Adafruit_CC3000
+IPPROTO_ICMP	utility/socket.h	83;"	d
+IPPROTO_IP	utility/socket.h	82;"	d
+IPPROTO_IPV4	utility/socket.h	84;"	d
+IPPROTO_IPV6	utility/socket.h	87;"	d
+IPPROTO_MAX	utility/socket.h	90;"	d
+IPPROTO_NONE	utility/socket.h	88;"	d
+IPPROTO_RAW	utility/socket.h	89;"	d
+IPPROTO_TCP	utility/socket.h	85;"	d
+IPPROTO_UDP	utility/socket.h	86;"	d
+ISR	utility/PinChangeInt.h	/^ISR(PCINT0_vect) {$/;"	f
+ISR	utility/PinChangeInt.h	/^ISR(PCINT1_vect) {$/;"	f
+ISR	utility/PinChangeInt.h	/^ISR(PCINT2_vect){ $/;"	f
+ISR	utility/PinChangeInt.h	/^ISR(PORTBVECT) {$/;"	f
+ISR	utility/PinChangeInt.h	/^ISR(PORTCVECT) {$/;"	f
+ISR	utility/PinChangeInt.h	/^ISR(PORTDVECT){ $/;"	f
+InformHostOnTxComplete	utility/cc3000_common.h	/^	unsigned char	 InformHostOnTxComplete;$/;"	m	struct:__anon1
+IsConnected	Adafruit_CC3000.cpp	/^  static const byte IsConnected = 0x02;$/;"	m	class:CC3000BitSet	file:
+IsSmartConfigFinished	Adafruit_CC3000.cpp	/^  static const byte IsSmartConfigFinished = 0x01;$/;"	m	class:CC3000BitSet	file:
+LI	utility/sntp.h	/^	SNTP_LI_t            LI            : 2;$/;"	m	struct:SNTP_Message_t
+LO	ccspi.cpp	60;"	d	file:
+MAC_ADDR_LEN	utility/cc3000_common.h	78;"	d
+MAXIMAL_SSID_LENGTH	utility/wlan.cpp	77;"	d	file:
+MAXLENGTHKEY	Adafruit_CC3000.cpp	106;"	d	file:
+MAXSSID	Adafruit_CC3000.cpp	105;"	d	file:
+MAX_LISTEN_QUEUE	utility/socket.h	109;"	d
+MAX_NTP_SERVERS	utility/sntp.h	285;"	d
+MAX_PACKET_SIZE	utility/socket.h	108;"	d
+MAX_SERVER_CLIENTS	Adafruit_CC3000_Server.h	32;"	d
+MAX_SOCKETS	Adafruit_CC3000.cpp	108;"	d	file:
+MAX_URL_NAME	utility/sntp.h	283;"	d
+MDNS_DEVICE_SERVICE_MAX_LENGTH	utility/socket.cpp	103;"	d	file:
+MIN_TIMER_SET	utility/netapp.cpp	51;"	d	file:
+MIN_TIMER_VAL_SECONDS	utility/netapp.cpp	50;"	d	file:
+M_BSD_RESP_PARAMS_OFFSET	utility/evnt_handler.h	109;"	d
+M_IS_VALID_SD	utility/evnt_handler.h	116;"	d
+M_IS_VALID_STATUS	utility/evnt_handler.h	117;"	d
+NETAPP_DHCP_PARAMS_LEN	utility/netapp.cpp	57;"	d	file:
+NETAPP_IPCONFIG_DHCP_OFFSET	utility/evnt_handler.cpp	99;"	d	file:
+NETAPP_IPCONFIG_DNS_OFFSET	utility/evnt_handler.cpp	100;"	d	file:
+NETAPP_IPCONFIG_GW_OFFSET	utility/evnt_handler.cpp	98;"	d	file:
+NETAPP_IPCONFIG_IP_LENGTH	utility/evnt_handler.cpp	104;"	d	file:
+NETAPP_IPCONFIG_IP_OFFSET	utility/evnt_handler.cpp	96;"	d	file:
+NETAPP_IPCONFIG_MAC_LENGTH	utility/evnt_handler.cpp	105;"	d	file:
+NETAPP_IPCONFIG_MAC_OFFSET	utility/evnt_handler.cpp	101;"	d	file:
+NETAPP_IPCONFIG_SSID_LENGTH	utility/evnt_handler.cpp	106;"	d	file:
+NETAPP_IPCONFIG_SSID_OFFSET	utility/evnt_handler.cpp	102;"	d	file:
+NETAPP_IPCONFIG_SUBNET_OFFSET	utility/evnt_handler.cpp	97;"	d	file:
+NETAPP_PING_AVG_RTT_OFFSET	utility/evnt_handler.cpp	113;"	d	file:
+NETAPP_PING_MAX_RTT_OFFSET	utility/evnt_handler.cpp	112;"	d	file:
+NETAPP_PING_MIN_RTT_OFFSET	utility/evnt_handler.cpp	111;"	d	file:
+NETAPP_PING_PACKETS_RCVD_OFFSET	utility/evnt_handler.cpp	110;"	d	file:
+NETAPP_PING_PACKETS_SENT_OFFSET	utility/evnt_handler.cpp	109;"	d	file:
+NETAPP_PING_SEND_PARAMS_LEN	utility/netapp.cpp	60;"	d	file:
+NETAPP_SET_DEBUG_LEVEL_PARAMS_LEN	utility/netapp.cpp	59;"	d	file:
+NETAPP_SET_TIMER_PARAMS_LEN	utility/netapp.cpp	58;"	d	file:
+NO_PORTA_PINCHANGES	utility/PinChangeInt.h	134;"	d
+NO_PORTA_PINCHANGES	utility/PinChangeInt.h	148;"	d
+NO_PORTC_PINCHANGES	ccspi.cpp	52;"	d	file:
+NO_PORTC_PINCHANGES	utility/PinChangeInt.h	135;"	d
+NO_PORTD_PINCHANGES	ccspi.cpp	51;"	d	file:
+NO_PORTD_PINCHANGES	utility/PinChangeInt.h	136;"	d
+NO_QUERY_RECIVED	utility/socket.h	122;"	d
+NTPGetTime	utility/sntp.cpp	/^SNTP_Timestamp_t* sntp::NTPGetTime(SNTP_Timestamp_t* ntpTime, bool local) $/;"	f	class:sntp
+NTPSetTime	utility/sntp.cpp	/^SNTP_Timestamp_t* sntp::NTPSetTime(SNTP_Timestamp_t* ntpTime, bool local) $/;"	f	class:sntp
+NTP_Pool_t	utility/sntp.h	/^typedef const char** NTP_Pool_t;							\/\/Name of NTP server pool$/;"	t
+NTP_Server_List_t	utility/sntp.h	/^typedef uint32_t  NTP_Server_List_t[MAX_NTP_SERVERS];   \/\/list of ntp server addresses (as returned by NTP server pool)$/;"	t
+NTPdiv2	utility/sntp.cpp	/^void NTPdiv2(SNTP_Timestamp_t* time) $/;"	f
+NUMBER_OF_TIME_ZONES	utility/sntp.h	287;"	d
+NVMEM_AES128_KEY_FILEID	utility/nvmem.h	87;"	d
+NVMEM_BOOTLOADER_SP_FILEID	utility/nvmem.h	83;"	d
+NVMEM_CREATE_PARAMS_LEN	utility/nvmem.cpp	72;"	d	file:
+NVMEM_FRONTEND_VARS_FILEID	utility/nvmem.h	80;"	d
+NVMEM_IP_CONFIG_FILEID	utility/nvmem.h	81;"	d
+NVMEM_IP_CONFIG_SHADOW_FILEID	utility/nvmem.h	82;"	d
+NVMEM_MAC_FILEID	utility/nvmem.h	79;"	d
+NVMEM_MAX_ENTRY	utility/nvmem.h	91;"	d
+NVMEM_NVS_FILEID	utility/nvmem.h	73;"	d
+NVMEM_NVS_SHADOW_FILEID	utility/nvmem.h	74;"	d
+NVMEM_READ_PARAMS_LEN	utility/nvmem.cpp	71;"	d	file:
+NVMEM_RM_FILEID	utility/nvmem.h	84;"	d
+NVMEM_SHARED_MEM_FILEID	utility/nvmem.h	88;"	d
+NVMEM_WLAN_CONFIG_FILEID	utility/nvmem.h	75;"	d
+NVMEM_WLAN_CONFIG_SHADOW_FILEID	utility/nvmem.h	76;"	d
+NVMEM_WLAN_DRIVER_SP_FILEID	utility/nvmem.h	77;"	d
+NVMEM_WLAN_FW_SP_FILEID	utility/nvmem.h	78;"	d
+NVMEM_WRITE_PARAMS_LEN	utility/nvmem.cpp	73;"	d	file:
+NetTime_t	utility/sntp.h	/^typedef struct NetTime_t$/;"	s
+NetTime_t	utility/sntp.h	/^}NetTime_t;$/;"	t	typeref:struct:NetTime_t
+NumberOfReleasedPackets	utility/cc3000_common.h	/^	unsigned long    NumberOfReleasedPackets;$/;"	m	struct:__anon1
+NumberOfSentPackets	utility/cc3000_common.h	/^	unsigned long    NumberOfSentPackets;$/;"	m	struct:__anon1
+OkToShutDown	Adafruit_CC3000.cpp	/^  static const byte OkToShutDown = 0x08;$/;"	m	class:CC3000BitSet	file:
+PATCHES_HOST_TYPE_BOOTLOADER	utility/wlan.cpp	72;"	d	file:
+PATCHES_HOST_TYPE_WLAN_DRIVER	utility/wlan.cpp	70;"	d	file:
+PATCHES_HOST_TYPE_WLAN_FW	utility/wlan.cpp	71;"	d	file:
+PCICRbit	utility/PinChangeInt.h	/^	const		uint8_t			PCICRbit;$/;"	m	class:PCintPort
+PCIFRbug	utility/PinChangeInt.h	/^	static volatile uint8_t PCIFRbug;$/;"	m	class:PCintPort
+PCIFRbug	utility/PinChangeInt.h	/^volatile uint8_t PCintPort::PCIFRbug=0;$/;"	m	class:PCintPort
+PCINT_VERSION	utility/PinChangeInt.h	96;"	d
+PCIntvoidFuncPtr	utility/PinChangeInt.h	/^typedef void (*PCIntvoidFuncPtr)(void);$/;"	t
+PCattachInterrupt	utility/PinChangeInt.h	162;"	d
+PCdetachInterrupt	utility/PinChangeInt.h	161;"	d
+PCgetArduinoPin	utility/PinChangeInt.h	163;"	d
+PCint	utility/PinChangeInt.h	/^void PCintPort::PCint() {$/;"	f	class:PCintPort
+PCintFunc	utility/PinChangeInt.h	/^		PCIntvoidFuncPtr PCintFunc;$/;"	m	class:PCintPort::PCintPin
+PCintPin	utility/PinChangeInt.h	/^		PCintPin() :$/;"	f	class:PCintPort::PCintPin
+PCintPin	utility/PinChangeInt.h	/^	class PCintPin {$/;"	c	class:PCintPort
+PCintPort	utility/PinChangeInt.h	/^	PCintPort(int index,int pcindex, volatile uint8_t& maskReg) :$/;"	f	class:PCintPort
+PCintPort	utility/PinChangeInt.h	/^class PCintPort {$/;"	c
+PINLED	utility/PinChangeInt.h	263;"	d
+PORTBVECT	utility/PinChangeInt.h	557;"	d
+PORTBVECT	utility/PinChangeInt.h	561;"	d
+PORTCVECT	utility/PinChangeInt.h	558;"	d
+PORTCVECT	utility/PinChangeInt.h	562;"	d
+PORTDVECT	utility/PinChangeInt.h	559;"	d
+PORTDVECT	utility/PinChangeInt.h	563;"	d
+PRINT_F	utility/debug.h	49;"	d
+PinChangeInt_h	utility/PinChangeInt.h	94;"	d
+READ	ccspi.cpp	57;"	d	file:
+RXBUFFERSIZE	Adafruit_CC3000.h	49;"	d
+Rcon	utility/security.cpp	/^const unsigned char Rcon[11] = {$/;"	v
+ReadWlanInterruptPin	ccspi.cpp	/^long ReadWlanInterruptPin(void)$/;"	f
+ReadWlanInterruptPin	utility/cc3000_common.h	/^    tWlanReadInteruptPin  ReadWlanInterruptPin;$/;"	m	struct:__anon1
+ResultStruct_t	Adafruit_CC3000.h	/^} ResultStruct_t;  	\/**!ResultStruct_t : data struct to store SSID scan results *\/$/;"	t	typeref:struct:Result_Struct
+Result_Struct	Adafruit_CC3000.h	/^typedef struct Result_Struct$/;"	s
+SECS_DAY	utility/sntp.cpp	35;"	d	file:
+SELECT_EXFD_OFFSET	utility/evnt_handler.cpp	93;"	d	file:
+SELECT_READFD_OFFSET	utility/evnt_handler.cpp	91;"	d	file:
+SELECT_STATUS_OFFSET	utility/evnt_handler.cpp	90;"	d	file:
+SELECT_TIMEOUT_MIN_MICRO_SECONDS	utility/socket.cpp	97;"	d	file:
+SELECT_WRITEFD_OFFSET	utility/evnt_handler.cpp	92;"	d	file:
+SEND_NON_BLOCKING	utility/socket.cpp	75;"	d	file:
+SERVER_PORT	tests/listener.py	/^	SERVER_PORT = sys.argv[1]$/;"	v
+SERVER_PORT	tests/listener.py	/^SERVER_PORT = 9000$/;"	v
+SET_mDNS_ADD	utility/socket.h	213;"	d
+SIMPLE_LINK_HCI_CMND_HEADER_SIZE	utility/hci.h	60;"	d
+SIMPLE_LINK_HCI_CMND_TRANSPORT_HEADER_SIZE	utility/socket.cpp	101;"	d	file:
+SIMPLE_LINK_HCI_DATA_CMND_HEADER_SIZE	utility/hci.h	62;"	d
+SIMPLE_LINK_HCI_DATA_HEADER_SIZE	utility/hci.h	63;"	d
+SIMPLE_LINK_HCI_PATCH_HEADER_SIZE	utility/hci.h	64;"	d
+SL_PATCHES_REQUEST_DEFAULT	utility/wlan.cpp	79;"	d	file:
+SL_PATCHES_REQUEST_FORCE_HOST	utility/wlan.cpp	80;"	d	file:
+SL_PATCHES_REQUEST_FORCE_NONE	utility/wlan.cpp	81;"	d	file:
+SL_PATCH_PORTION_SIZE	utility/hci.cpp	57;"	d	file:
+SL_RECEIVE_NUM_BYTES_OFFSET	utility/evnt_handler.cpp	86;"	d	file:
+SL_RECEIVE_SD_OFFSET	utility/evnt_handler.cpp	85;"	d	file:
+SL_RECEIVE__FLAGS__OFFSET	utility/evnt_handler.cpp	87;"	d	file:
+SL_SET_SCAN_PARAMS_INTERVAL_LIST_SIZE	utility/wlan.cpp	74;"	d	file:
+SL_SIMPLE_CONFIG_PREFIX_LENGTH	utility/wlan.cpp	75;"	d	file:
+SMART_CONFIG_PROFILE_SIZE	utility/wlan.cpp	62;"	d	file:
+SNTP_GetTime	utility/sntp.cpp	/^bool  sntp::SNTP_GetTime(int	sntpSocket, uint32_t *ntpServerAddr) $/;"	f	class:sntp
+SNTP_LI_t	utility/sntp.h	/^						} SNTP_LI_t;$/;"	t	typeref:enum:SNTP_LI_t
+SNTP_LI_t	utility/sntp.h	/^typedef enum SNTP_LI_t	{	no_warning = 0,$/;"	g
+SNTP_Message_t	utility/sntp.h	/^typedef struct SNTP_Message_t$/;"	s
+SNTP_Message_t	utility/sntp.h	/^}SNTP_Message_t;$/;"	t	typeref:struct:SNTP_Message_t
+SNTP_Mode_t	utility/sntp.h	/^						 } SNTP_Mode_t;$/;"	t	typeref:enum:SNTP_Mode_t
+SNTP_Mode_t	utility/sntp.h	/^typedef enum SNTP_Mode_t {	reserved = 0,$/;"	g
+SNTP_PORT	utility/sntp.h	281;"	d
+SNTP_Stratum_t	utility/sntp.h	/^typedef struct SNTP_Stratum_t$/;"	s
+SNTP_Stratum_t	utility/sntp.h	/^}SNTP_Stratum_t;$/;"	t	typeref:struct:SNTP_Stratum_t
+SNTP_Timestamp_t	utility/sntp.h	/^typedef struct SNTP_Timestamp_t$/;"	s
+SNTP_Timestamp_t	utility/sntp.h	/^}SNTP_Timestamp_t;$/;"	t	typeref:struct:SNTP_Timestamp_t
+SOCKET_ACCEPT_PARAMS_LEN	utility/socket.cpp	78;"	d	file:
+SOCKET_BIND_PARAMS_LEN	utility/socket.cpp	79;"	d	file:
+SOCKET_CLOSE_PARAMS_LEN	utility/socket.cpp	77;"	d	file:
+SOCKET_CONNECT_PARAMS_LEN	utility/socket.cpp	82;"	d	file:
+SOCKET_GET_HOST_BY_NAME_PARAMS_LEN	utility/socket.cpp	81;"	d	file:
+SOCKET_GET_SOCK_OPT_PARAMS_LEN	utility/socket.cpp	85;"	d	file:
+SOCKET_LISTEN_PARAMS_LEN	utility/socket.cpp	80;"	d	file:
+SOCKET_MDNS_ADVERTISE_PARAMS_LEN	utility/socket.cpp	88;"	d	file:
+SOCKET_OPEN_PARAMS_LEN	utility/socket.cpp	76;"	d	file:
+SOCKET_RECV_FROM_PARAMS_LEN	utility/socket.cpp	86;"	d	file:
+SOCKET_SELECT_PARAMS_LEN	utility/socket.cpp	83;"	d	file:
+SOCKET_SENDTO_PARAMS_LEN	utility/socket.cpp	87;"	d	file:
+SOCKET_SET_SOCK_OPT_PARAMS_LEN	utility/socket.cpp	84;"	d	file:
+SOCKET_STATUS_ACTIVE	utility/evnt_handler.h	111;"	d
+SOCKET_STATUS_INACTIVE	utility/evnt_handler.h	112;"	d
+SOCKET_STATUS_INIT_VAL	utility/evnt_handler.h	115;"	d
+SOCKOPT_ACCEPT_NONBLOCK	utility/socket.h	101;"	d
+SOCKOPT_RECV_NONBLOCK	utility/socket.h	99;"	d
+SOCKOPT_RECV_TIMEOUT	utility/socket.h	100;"	d
+SOCK_DGRAM	utility/socket.h	75;"	d
+SOCK_OFF	utility/socket.h	103;"	d
+SOCK_ON	utility/socket.h	102;"	d
+SOCK_RAW	utility/socket.h	76;"	d
+SOCK_RDM	utility/socket.h	77;"	d
+SOCK_SEQPACKET	utility/socket.h	78;"	d
+SOCK_STREAM	utility/socket.h	74;"	d
+SOC_ERROR	utility/socket.h	94;"	d
+SOC_IN_PROGRESS	utility/socket.h	95;"	d
+SOL_SOCKET	utility/socket.h	98;"	d
+SPIRxHandler	ccspi.cpp	/^  gcSpiHandleRx  SPIRxHandler;$/;"	m	struct:__anon3	file:
+SPI_CLOCK_DIVIDER	Adafruit_CC3000.h	34;"	d
+SPI_CLOCK_DIVIDER	Adafruit_CC3000.h	36;"	d
+SPI_HEADER_SIZE	ccspi.cpp	62;"	d	file:
+SPI_HEADER_SIZE	utility/hci.h	59;"	d
+SPI_IRQ	ccspi.cpp	/^void SPI_IRQ(void)$/;"	f
+SP_PORTION_SIZE	utility/cc3000_common.h	80;"	d
+SSIContReadOperation	ccspi.cpp	/^void SSIContReadOperation(void)$/;"	f
+SSIDScanResultBuff	Adafruit_CC3000.cpp	/^ResultStruct_t SSIDScanResultBuff;$/;"	v
+STATUS_CONNECTED	Adafruit_CC3000.h	/^  STATUS_CONNECTED    = 3$/;"	e	enum:__anon4
+STATUS_CONNECTING	Adafruit_CC3000.h	/^  STATUS_CONNECTING   = 2,$/;"	e	enum:__anon4
+STATUS_DISCONNECTED	Adafruit_CC3000.h	/^  STATUS_DISCONNECTED = 0,$/;"	e	enum:__anon4
+STATUS_SCANNING	Adafruit_CC3000.h	/^  STATUS_SCANNING     = 1,$/;"	e	enum:__anon4
+STREAM_TO_STREAM	utility/cc3000_common.h	371;"	d
+STREAM_TO_UINT16	utility/cc3000_common.h	368;"	d
+STREAM_TO_UINT16_f	utility/cc3000_common.cpp	/^uint16_t STREAM_TO_UINT16_f(char* cp, uint16_t offset)$/;"	f
+STREAM_TO_UINT32	utility/cc3000_common.h	370;"	d
+STREAM_TO_UINT32_f	utility/cc3000_common.cpp	/^uint32_t STREAM_TO_UINT32_f(char * cp, uint16_t offset)$/;"	f
+STREAM_TO_UINT8	utility/cc3000_common.h	366;"	d
+Sec_ssidLen	Adafruit_CC3000.h	/^	uint8_t 	Sec_ssidLen;$/;"	m	struct:Result_Struct
+SimpleLinkWaitData	utility/evnt_handler.cpp	/^SimpleLinkWaitData(unsigned char *pBuf, unsigned char *from,$/;"	f
+SimpleLinkWaitEvent	utility/evnt_handler.cpp	/^SimpleLinkWaitEvent(unsigned short usOpcode, void *pRetParams)$/;"	f
+SimpleLink_Init_Start	utility/wlan.cpp	/^static void SimpleLink_Init_Start(unsigned short usPatchesAvailableAtHost)$/;"	f	file:
+SpiClose	ccspi.cpp	/^void SpiClose(void)$/;"	f
+SpiConfigPop	ccspi.cpp	105;"	d	file:
+SpiConfigPop	ccspi.cpp	112;"	d	file:
+SpiConfigPop	ccspi.cpp	95;"	d	file:
+SpiConfigPush	ccspi.cpp	104;"	d	file:
+SpiConfigPush	ccspi.cpp	111;"	d	file:
+SpiConfigPush	ccspi.cpp	89;"	d	file:
+SpiConfigStoreMy	ccspi.cpp	103;"	d	file:
+SpiConfigStoreMy	ccspi.cpp	110;"	d	file:
+SpiConfigStoreMy	ccspi.cpp	86;"	d	file:
+SpiConfigStoreOld	ccspi.cpp	102;"	d	file:
+SpiConfigStoreOld	ccspi.cpp	109;"	d	file:
+SpiConfigStoreOld	ccspi.cpp	83;"	d	file:
+SpiFirstWrite	ccspi.cpp	/^long SpiFirstWrite(unsigned char *ucBuf, unsigned short usLength)$/;"	f
+SpiOpen	ccspi.cpp	/^void SpiOpen(gcSpiHandleRx pfRxHandler)$/;"	f
+SpiPauseSpi	ccspi.cpp	/^void SpiPauseSpi(void)$/;"	f
+SpiReadDataCont	ccspi.cpp	/^long SpiReadDataCont(void)$/;"	f
+SpiReadDataSynchronous	ccspi.cpp	/^void SpiReadDataSynchronous(unsigned char *data, unsigned short size)$/;"	f
+SpiReadHeader	ccspi.cpp	/^void SpiReadHeader(void)$/;"	f
+SpiReceiveHandler	utility/wlan.cpp	/^void SpiReceiveHandler(void *pvBuffer)$/;"	f
+SpiResumeSpi	ccspi.cpp	/^void SpiResumeSpi(void)$/;"	f
+SpiTriggerRxProcessing	ccspi.cpp	/^void SpiTriggerRxProcessing(void)$/;"	f
+SpiWrite	ccspi.cpp	/^long SpiWrite(unsigned char *pUserBuffer, unsigned short usLength)$/;"	f
+SpiWriteDataSynchronous	ccspi.cpp	/^void SpiWriteDataSynchronous(unsigned char *data, unsigned short size)$/;"	f
+TCP_BSDURGENT	utility/socket.h	106;"	d
+TCP_NODELAY	utility/socket.h	105;"	d
+TINY_CC3000_MAXIMAL_RX_SIZE	utility/cc3000_common.h	142;"	d
+TINY_CC3000_MAXIMAL_TX_SIZE	utility/cc3000_common.h	143;"	d
+TXBUFFERSIZE	Adafruit_CC3000.h	50;"	d
+UINT16_TO_STREAM	utility/cc3000_common.h	360;"	d
+UINT16_TO_STREAM_f	utility/cc3000_common.cpp	/^uint8_t* UINT16_TO_STREAM_f (uint8_t *p, uint16_t u16)$/;"	f
+UINT32_TO_STREAM	utility/cc3000_common.h	362;"	d
+UINT32_TO_STREAM_f	utility/cc3000_common.cpp	/^uint8_t* UINT32_TO_STREAM_f (uint8_t *p, uint32_t u32)$/;"	f
+UINT8_TO_STREAM	utility/cc3000_common.h	358;"	d
+UpdateNTPTime	utility/sntp.cpp	/^bool sntp::UpdateNTPTime()$/;"	f	class:sntp
+VN	utility/sntp.h	/^	uint8_t              VN            : 3;$/;"	m	struct:SNTP_Message_t
+WIFI_DISABLE	Adafruit_CC3000.h	53;"	d
+WIFI_ENABLE	Adafruit_CC3000.h	52;"	d
+WIFI_STATUS_CONNECTED	Adafruit_CC3000.h	54;"	d
+WLAN_ADD_PROFILE_NOSEC_PARAM_LEN	utility/wlan.cpp	97;"	d	file:
+WLAN_ADD_PROFILE_WEP_PARAM_LEN	utility/wlan.cpp	98;"	d	file:
+WLAN_ADD_PROFILE_WPA_PARAM_LEN	utility/wlan.cpp	99;"	d	file:
+WLAN_CONNECT_PARAM_LEN	utility/wlan.cpp	100;"	d	file:
+WLAN_CONNECT_TIMEOUT	Adafruit_CC3000.h	48;"	d
+WLAN_DEL_PROFILE_PARAMS_LEN	utility/wlan.cpp	93;"	d	file:
+WLAN_DISABLE	utility/cc3000_common.h	76;"	d
+WLAN_ENABLE	utility/cc3000_common.h	75;"	d
+WLAN_GET_SCAN_RESULTS_PARAMS_LEN	utility/wlan.cpp	96;"	d	file:
+WLAN_PATCH_PARAMS_LENGTH	utility/wlan.cpp	91;"	d	file:
+WLAN_SEC_UNSEC	utility/wlan.cpp	84;"	d	file:
+WLAN_SEC_UNSEC	utility/wlan.h	66;"	d
+WLAN_SEC_WEP	utility/wlan.cpp	85;"	d	file:
+WLAN_SEC_WEP	utility/wlan.h	67;"	d
+WLAN_SEC_WPA	utility/wlan.cpp	86;"	d	file:
+WLAN_SEC_WPA	utility/wlan.h	68;"	d
+WLAN_SEC_WPA2	utility/wlan.cpp	87;"	d	file:
+WLAN_SEC_WPA2	utility/wlan.h	69;"	d
+WLAN_SET_CONNECTION_POLICY_PARAMS_LEN	utility/wlan.cpp	92;"	d	file:
+WLAN_SET_MASK_PARAMS_LEN	utility/wlan.cpp	94;"	d	file:
+WLAN_SET_SCAN_PARAMS_LEN	utility/wlan.cpp	95;"	d	file:
+WLAN_SL_INIT_START_PARAMS_LEN	utility/wlan.cpp	90;"	d	file:
+WLAN_SMART_CONFIG_START_PARAMS_LEN	utility/wlan.cpp	101;"	d	file:
+WRITE	ccspi.cpp	58;"	d	file:
+WlanInterruptDisable	ccspi.cpp	/^void WlanInterruptDisable()$/;"	f
+WlanInterruptDisable	utility/cc3000_common.h	/^    tWlanInterruptDisable WlanInterruptDisable;$/;"	m	struct:__anon1
+WlanInterruptEnable	ccspi.cpp	/^void WlanInterruptEnable()$/;"	f
+WlanInterruptEnable	utility/cc3000_common.h	/^    tWlanInterruptEnable  WlanInterruptEnable;$/;"	m	struct:__anon1
+WriteWlanPin	ccspi.cpp	/^void WriteWlanPin( unsigned char val )$/;"	f
+WriteWlanPin	utility/cc3000_common.h	/^    tWriteWlanPin         WriteWlanPin;$/;"	m	struct:__anon1
+_CC3000_DEBUG	utility/debug.h	32;"	d
+_SNTP_h	utility/sntp.h	4;"	d
+__COMMON_H__	utility/cc3000_common.h	44;"	d
+__EVENT_HANDLER_H__	utility/evnt_handler.h	44;"	d
+__FDELT	utility/socket.h	151;"	d
+__FDMASK	utility/socket.h	152;"	d
+__FDS_BITS	utility/socket.h	162;"	d
+__FD_CLR	utility/socket.h	175;"	d
+__FD_ISSET	utility/socket.h	176;"	d
+__FD_SET	utility/socket.h	174;"	d
+__FD_SETSIZE	utility/socket.h	118;"	d
+__FD_ZERO	utility/socket.h	167;"	d
+__HCI_H__	utility/hci.h	44;"	d
+__HOST_DRIVER_VERSION_H__	utility/host_driver_version.h	36;"	d
+__NETAPP_H__	utility/netapp.h	44;"	d
+__NFDBITS	utility/socket.h	150;"	d
+__NVRAM_H__	utility/nvmem.h	44;"	d
+__SECURITY__	utility/security.h	36;"	d
+__SOCKET_H__	utility/socket.h	44;"	d
+__SPI_H__	ccspi.h	46;"	d
+__USE_PORT_A	utility/PinChangeInt.h	145;"	d
+__USE_PORT_JK	utility/PinChangeInt.h	132;"	d
+__WLAN_H__	utility/wlan.h	52;"	d
+__error__	utility/cc3000_common.cpp	/^__error__(char *pcFilename, unsigned long ulLine)$/;"	f
+__fd_mask	utility/socket.h	/^typedef long int __fd_mask;$/;"	t
+_bsd_accept_return_t	utility/evnt_handler.h	/^typedef struct _bsd_accept_return_t$/;"	s
+_bsd_gethostbyname_return_t	utility/evnt_handler.h	/^typedef struct _bsd_gethostbyname_return_t$/;"	s
+_bsd_getsockopt_return_t	utility/evnt_handler.h	/^typedef struct _bsd_getsockopt_return_t$/;"	s
+_bsd_read_return_t	utility/evnt_handler.h	/^typedef struct _bsd_read_return_t$/;"	s
+_bsd_select_return_t	utility/evnt_handler.h	/^typedef struct _bsd_select_return_t$/;"	s
+_cc3000_prefix	Adafruit_CC3000.cpp	/^char _cc3000_prefix[] = { 'T', 'T', 'T' };$/;"	v
+_client	Adafruit_CC3000_Server.h	/^  Adafruit_CC3000_Client* _client;$/;"	m	class:Adafruit_CC3000_ClientRef
+_clients	Adafruit_CC3000_Server.h	/^  Adafruit_CC3000_Client _clients[MAX_SERVER_CLIENTS];$/;"	m	class:Adafruit_CC3000_Server
+_deviceName	Adafruit_CC3000.cpp	/^char _deviceName[] = "CC3000";$/;"	v
+_in_addr_t	utility/socket.h	/^typedef struct _in_addr_t$/;"	s
+_initialised	Adafruit_CC3000.h	/^    bool _initialised;$/;"	m	class:Adafruit_CC3000
+_listenSocket	Adafruit_CC3000_Server.h	/^  uint16_t _listenSocket;$/;"	m	class:Adafruit_CC3000_Server
+_netapp_dhcp_ret_args_t	utility/netapp.h	/^typedef struct _netapp_dhcp_ret_args_t$/;"	s
+_netapp_ipconfig_ret_args_t	utility/netapp.h	/^typedef struct _netapp_ipconfig_ret_args_t$/;"	s
+_netapp_pingreport_args	utility/netapp.h	/^typedef struct _netapp_pingreport_args$/;"	s
+_port	Adafruit_CC3000_Server.h	/^  uint16_t _port;$/;"	m	class:Adafruit_CC3000_Server
+_rx_buf	Adafruit_CC3000.h	/^  uint8_t _rx_buf[RXBUFFERSIZE], _rx_buf_idx;$/;"	m	class:Adafruit_CC3000_Client
+_rx_buf_idx	Adafruit_CC3000.h	/^  uint8_t _rx_buf[RXBUFFERSIZE], _rx_buf_idx;$/;"	m	class:Adafruit_CC3000_Client
+_smartConfigKey	Adafruit_CC3000.cpp	/^const unsigned char _smartConfigKey[] = { 0x30, 0x31, 0x32, 0x33, 0x34, 0x35, 0x36, 0x37,$/;"	v
+_sockaddr_in_t	utility/socket.h	/^typedef struct _sockaddr_in_t$/;"	s
+_sockaddr_t	utility/socket.h	/^typedef struct _sockaddr_t$/;"	s
+_socket	Adafruit_CC3000.h	/^  int16_t _socket;$/;"	m	class:Adafruit_CC3000_Client
+accept	utility/socket.cpp	/^accept(long sd, sockaddr *addr, socklen_t *addrlen)$/;"	f
+acceptNewConnections	Adafruit_CC3000_Server.cpp	/^void Adafruit_CC3000_Server::acceptNewConnections() {$/;"	f	class:Adafruit_CC3000_Server
+addPin	utility/PinChangeInt.h	/^int8_t PCintPort::addPin(uint8_t arduinoPin, PCIntvoidFuncPtr userFunc, uint8_t mode)$/;"	f	class:PCintPort
+aes_decr	utility/security.cpp	/^void aes_decr(unsigned char *state, unsigned char *expandedKey)$/;"	f
+aes_decrypt	utility/security.cpp	/^void aes_decrypt(unsigned char *state,$/;"	f
+aes_encr	utility/security.cpp	/^void aes_encr(unsigned char *state, unsigned char *expandedKey)$/;"	f
+aes_encrypt	utility/security.cpp	/^void aes_encrypt(unsigned char *state,$/;"	f
+aes_read_key	utility/security.cpp	/^signed long aes_read_key(unsigned char *key)$/;"	f
+aes_write_key	utility/security.cpp	/^signed long aes_write_key(unsigned char *key)$/;"	f
+alarm	utility/sntp.h	/^							alarm$/;"	e	enum:SNTP_LI_t
+arduinoPin	utility/PinChangeInt.h	/^		uint8_t arduinoPin;$/;"	m	class:PCintPort::PCintPin
+arduinoPin	utility/PinChangeInt.h	/^	static	volatile uint8_t	arduinoPin;$/;"	m	class:PCintPort
+arduinoPin	utility/PinChangeInt.h	/^volatile uint8_t PCintPort::arduinoPin=0;$/;"	m	class:PCintPort
+attachInterrupt	utility/PinChangeInt.h	/^int8_t PCintPort::attachInterrupt(uint8_t arduinoPin, PCIntvoidFuncPtr userFunc, int mode)$/;"	f	class:PCintPort
+aucDHCPServer	utility/netapp.h	/^	unsigned char aucDHCPServer[4];$/;"	m	struct:_netapp_dhcp_ret_args_t
+aucDHCPServer	utility/netapp.h	/^	unsigned char aucDHCPServer[4];$/;"	m	struct:_netapp_ipconfig_ret_args_t
+aucDNSServer	utility/netapp.h	/^	unsigned char aucDNSServer[4];$/;"	m	struct:_netapp_dhcp_ret_args_t
+aucDNSServer	utility/netapp.h	/^	unsigned char aucDNSServer[4];$/;"	m	struct:_netapp_ipconfig_ret_args_t
+aucDefaultGateway	utility/netapp.h	/^	unsigned char aucDefaultGateway[4];$/;"	m	struct:_netapp_dhcp_ret_args_t
+aucDefaultGateway	utility/netapp.h	/^	unsigned char aucDefaultGateway[4];$/;"	m	struct:_netapp_ipconfig_ret_args_t
+aucIP	utility/netapp.h	/^    unsigned char aucIP[4];$/;"	m	struct:_netapp_dhcp_ret_args_t
+aucIP	utility/netapp.h	/^    unsigned char aucIP[4];$/;"	m	struct:_netapp_ipconfig_ret_args_t
+aucSubnetMask	utility/netapp.h	/^	unsigned char aucSubnetMask[4];$/;"	m	struct:_netapp_dhcp_ret_args_t
+aucSubnetMask	utility/netapp.h	/^	unsigned char aucSubnetMask[4];$/;"	m	struct:_netapp_ipconfig_ret_args_t
+available	Adafruit_CC3000.cpp	/^uint8_t Adafruit_CC3000_Client::available(void) {$/;"	f	class:Adafruit_CC3000_Client
+available	Adafruit_CC3000_Server.cpp	/^Adafruit_CC3000_ClientRef Adafruit_CC3000_Server::available() {$/;"	f	class:Adafruit_CC3000_Server
+available	Adafruit_CC3000_Server.cpp	/^uint8_t Adafruit_CC3000_ClientRef::available(void) {$/;"	f	class:Adafruit_CC3000_ClientRef
+avg_round_time	utility/netapp.h	/^	unsigned long avg_round_time;$/;"	m	struct:_netapp_pingreport_args
+begin	Adafruit_CC3000.cpp	/^bool Adafruit_CC3000::begin(uint8_t patchReq, bool useSmartConfigData)$/;"	f	class:Adafruit_CC3000
+begin	Adafruit_CC3000_Server.cpp	/^void Adafruit_CC3000_Server::begin() {$/;"	f	class:Adafruit_CC3000_Server
+bind	utility/socket.cpp	/^bind(long sd, const sockaddr *addr, long addrlen)$/;"	f
+broadcast	utility/sntp.h	/^							broadcast,$/;"	e	enum:SNTP_Mode_t
+bssid	Adafruit_CC3000.h	/^	uint8_t 	bssid[6];$/;"	m	struct:Result_Struct
+bufsiz	Adafruit_CC3000.h	/^  int16_t bufsiz;$/;"	m	class:Adafruit_CC3000_Client
+cRMdefaultParams	examples/driverpatch_1_12/driverpatchinc.h	/^uint8_t cRMdefaultParams[128] = { 0x03, 0x00, 0x01, 0x01, 0x14, 0x14, 0x00, 0x27, 0x27, 0x27, 0x27, 0x27, 0x27, 0x27, 0x27, 0x27, 0x27, 0x27, 0x27, 0x27, 0x27, 0x23, 0x25, 0x25, 0x25, 0x25, 0x25, 0x25, 0x25, 0x25, 0x25, 0x23, 0x23, 0x23, 0x23, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x50, 0x50, 0x50, 0x50, 0x50, 0x50, 0x50, 0x50, 0x50, 0x50, 0x50, 0x50, 0x50, 0x50, 0x50, 0x50, 0x50, 0x50, 0x50, 0x50, 0x50, 0x50, 0x50, 0x50, 0x50, 0x50, 0x50, 0x50, 0x50, 0x50, 0x50, 0x50, 0x50, 0x50, 0x50, 0x01, 0x77, 0x80, 0x1D, 0x1F, 0x22, 0x26, 0x28, 0x29, 0x1A, 0x1F, 0x22, 0x24, 0x26, 0x28, 0x16, 0x1D, 0x1E, 0x20, 0x24, 0x25, 0x1E, 0x2D, 0x01, 0x02, 0x02, 0x02, 0x02, 0x00, 0x15, 0x15, 0x15, 0x11, 0x15, 0x15, 0x0E, 0x00};$/;"	v
+cc3000Bitset	Adafruit_CC3000.cpp	/^}cc3000Bitset;$/;"	v	typeref:class:CC3000BitSet
+cc3k_int_poll	ccspi.cpp	/^void cc3k_int_poll()$/;"	f
+ccspi_int_enabled	ccspi.cpp	/^static volatile char ccspi_int_enabled = 0;$/;"	v	file:
+ccspi_is_in_irq	ccspi.cpp	/^static volatile char ccspi_is_in_irq = 0;$/;"	v	file:
+ccspi_mySPCR	ccspi.cpp	/^uint8_t ccspi_mySPCR, ccspi_mySPSR, ccspi_oldSPSR, ccspi_oldSPCR;$/;"	v
+ccspi_mySPICTRL	ccspi.cpp	/^uint8_t ccspi_mySPICTRL, ccspi_oldSPICTRL;$/;"	v
+ccspi_mySPSR	ccspi.cpp	/^uint8_t ccspi_mySPCR, ccspi_mySPSR, ccspi_oldSPSR, ccspi_oldSPCR;$/;"	v
+ccspi_oldSPCR	ccspi.cpp	/^uint8_t ccspi_mySPCR, ccspi_mySPSR, ccspi_oldSPSR, ccspi_oldSPCR;$/;"	v
+ccspi_oldSPICTRL	ccspi.cpp	/^uint8_t ccspi_mySPICTRL, ccspi_oldSPICTRL;$/;"	v
+ccspi_oldSPSR	ccspi.cpp	/^uint8_t ccspi_mySPCR, ccspi_mySPSR, ccspi_oldSPSR, ccspi_oldSPCR;$/;"	v
+checkConnected	Adafruit_CC3000.cpp	/^bool Adafruit_CC3000::checkConnected(void)$/;"	f	class:Adafruit_CC3000
+checkDHCP	Adafruit_CC3000.cpp	/^bool Adafruit_CC3000::checkDHCP(void)$/;"	f	class:Adafruit_CC3000
+checkSmartConfigFinished	Adafruit_CC3000.cpp	/^bool Adafruit_CC3000::checkSmartConfigFinished(void)$/;"	f	class:Adafruit_CC3000
+clear	Adafruit_CC3000.cpp	/^  void clear() {$/;"	f	class:CC3000BitSet
+client	utility/sntp.h	/^							client,$/;"	e	enum:SNTP_Mode_t
+clock_t	utility/cc3000_common.h	/^typedef unsigned long clock_t;$/;"	t
+close	Adafruit_CC3000.cpp	/^int32_t Adafruit_CC3000_Client::close(void) {$/;"	f	class:Adafruit_CC3000_Client
+close	Adafruit_CC3000_Server.cpp	/^int32_t Adafruit_CC3000_ClientRef::close(void) {$/;"	f	class:Adafruit_CC3000_ClientRef
+close	utility/socket.cpp	65;"	d	file:
+closed_sockets	Adafruit_CC3000.cpp	/^boolean closed_sockets[MAX_SOCKETS] = {false, false, false, false};$/;"	v
+closesocket	utility/socket.cpp	/^closesocket(long sd)$/;"	f
+connect	utility/socket.cpp	/^connect(long sd, const sockaddr *addr, long addrlen)$/;"	f
+connectOpen	Adafruit_CC3000.cpp	/^bool Adafruit_CC3000::connectOpen(const char *ssid)$/;"	f	class:Adafruit_CC3000
+connectSecure	Adafruit_CC3000.cpp	/^bool Adafruit_CC3000::connectSecure(const char *ssid, const char *key, int32_t secMode)$/;"	f	class:Adafruit_CC3000
+connectTCP	Adafruit_CC3000.cpp	/^Adafruit_CC3000_Client Adafruit_CC3000::connectTCP(uint32_t destIP, uint16_t destPort)$/;"	f	class:Adafruit_CC3000
+connectToAP	Adafruit_CC3000.cpp	/^bool Adafruit_CC3000::connectToAP(const char *ssid, const char *key, uint8_t secmode) {$/;"	f	class:Adafruit_CC3000
+connectUDP	Adafruit_CC3000.cpp	/^Adafruit_CC3000_Client Adafruit_CC3000::connectUDP(uint32_t destIP, uint16_t destPort)$/;"	f	class:Adafruit_CC3000
+connected	Adafruit_CC3000.cpp	/^bool Adafruit_CC3000_Client::connected(void) { $/;"	f	class:Adafruit_CC3000_Client
+connected	Adafruit_CC3000_Server.cpp	/^bool Adafruit_CC3000_ClientRef::connected(void) {$/;"	f	class:Adafruit_CC3000_ClientRef
+curr	utility/PinChangeInt.h	/^	static volatile uint8_t curr;$/;"	m	class:PCintPort
+curr	utility/PinChangeInt.h	/^volatile uint8_t PCintPort::curr=0;$/;"	m	class:PCintPort
+delay	utility/sntp.h	/^	long                 delay;$/;"	m	struct:SNTP_Message_t
+deleteProfiles	Adafruit_CC3000.cpp	/^bool Adafruit_CC3000::deleteProfiles(void)$/;"	f	class:Adafruit_CC3000
+detachInterrupt	utility/PinChangeInt.h	/^void PCintPort::detachInterrupt(uint8_t arduinoPin)$/;"	f	class:PCintPort
+disconnect	Adafruit_CC3000.cpp	/^bool Adafruit_CC3000::disconnect(void)$/;"	f	class:Adafruit_CC3000
+dispersion	utility/sntp.h	/^	uint32_t             dispersion;$/;"	m	struct:SNTP_Message_t
+displayFreeRam	utility/debug.cpp	/^void displayFreeRam(void)$/;"	f
+dreqinttable	Adafruit_CC3000.cpp	/^static const uint8_t dreqinttable[] = {$/;"	v	file:
+drv_length	examples/driverpatch_1_12/driverpatchinc.h	/^uint16_t drv_length = 8076;$/;"	v
+dumpBlock1	utility/sntp.cpp	/^	void dumpBlock1(char* buf, short len) 	\/*rdl 2\/16\/2008*\/$/;"	f
+eSPI_STATE_IDLE	ccspi.cpp	66;"	d	file:
+eSPI_STATE_INITIALIZED	ccspi.cpp	65;"	d	file:
+eSPI_STATE_POWERUP	ccspi.cpp	64;"	d	file:
+eSPI_STATE_READ_EOT	ccspi.cpp	72;"	d	file:
+eSPI_STATE_READ_FIRST_PORTION	ccspi.cpp	71;"	d	file:
+eSPI_STATE_READ_IRQ	ccspi.cpp	70;"	d	file:
+eSPI_STATE_WRITE_EOT	ccspi.cpp	69;"	d	file:
+eSPI_STATE_WRITE_FIRST_PORTION	ccspi.cpp	68;"	d	file:
+eSPI_STATE_WRITE_IRQ	ccspi.cpp	67;"	d	file:
+enable	utility/PinChangeInt.h	/^void PCintPort::enable(PCintPin* p, PCIntvoidFuncPtr userFunc, uint8_t mode) {$/;"	f	class:PCintPort
+expandKey	utility/security.cpp	/^void expandKey(unsigned char *expandedKey,$/;"	f
+expandedKey	utility/security.cpp	/^unsigned char expandedKey[176];$/;"	v
+fastrprint	Adafruit_CC3000.cpp	/^size_t Adafruit_CC3000_Client::fastrprint(const __FlashStringHelper *ifsh)$/;"	f	class:Adafruit_CC3000_Client
+fastrprint	Adafruit_CC3000.cpp	/^size_t Adafruit_CC3000_Client::fastrprint(const char *str)$/;"	f	class:Adafruit_CC3000_Client
+fastrprint	Adafruit_CC3000_Server.cpp	/^size_t Adafruit_CC3000_ClientRef::fastrprint(const __FlashStringHelper *ifsh) {$/;"	f	class:Adafruit_CC3000_ClientRef
+fastrprint	Adafruit_CC3000_Server.cpp	/^size_t Adafruit_CC3000_ClientRef::fastrprint(const char *str) {$/;"	f	class:Adafruit_CC3000_ClientRef
+fastrprintln	Adafruit_CC3000.cpp	/^size_t Adafruit_CC3000_Client::fastrprintln(const __FlashStringHelper *ifsh)$/;"	f	class:Adafruit_CC3000_Client
+fastrprintln	Adafruit_CC3000.cpp	/^size_t Adafruit_CC3000_Client::fastrprintln(const char *str)$/;"	f	class:Adafruit_CC3000_Client
+fastrprintln	Adafruit_CC3000_Server.cpp	/^size_t Adafruit_CC3000_ClientRef::fastrprintln(const __FlashStringHelper *ifsh) {$/;"	f	class:Adafruit_CC3000_ClientRef
+fastrprintln	Adafruit_CC3000_Server.cpp	/^size_t Adafruit_CC3000_ClientRef::fastrprintln(const char *str) {$/;"	f	class:Adafruit_CC3000_ClientRef
+fd_set	utility/socket.h	/^} fd_set;$/;"	t	typeref:struct:__anon2
+fd_set	utility/socket.h	155;"	d
+fds_bits	utility/socket.h	/^    __fd_mask fds_bits[__FD_SETSIZE \/ __NFDBITS];$/;"	m	struct:__anon2
+fifty_Nine	utility/sntp.h	/^							fifty_Nine,$/;"	e	enum:SNTP_LI_t
+firstPin	utility/PinChangeInt.h	/^	PCintPin*	firstPin;$/;"	m	class:PCintPort
+flags	Adafruit_CC3000.cpp	/^	volatile byte flags;$/;"	m	class:CC3000BitSet	file:
+fraction	utility/sntp.h	/^	int32_t  fraction;$/;"	m	struct:SNTP_Timestamp_t
+fw_length	examples/driverpatch_1_12/driverpatchinc.h	/^uint16_t fw_length = 5700;$/;"	v
+fw_patch	examples/driverpatch_1_12/driverpatchinc.h	/^unsigned char PROGMEM fw_patch[5700] = { 0x00, 0x01, 0x00, 0x00, 0x3C, 0x16, 0x00, 0x00, 0x00, 0x00, 0x18, 0x00, 0x14, 0x03, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x68, 0x46, 0x25, 0xF0, 0x95, 0xFB, 0xE0, 0x6B, 0xD0, 0x03, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x25, 0xF0, 0x38, 0xFB, 0x2C, 0x04, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x25, 0xF0, 0x0A, 0xFB, 0x04, 0x15, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0xB8, 0xF1, 0x90, 0x0F, 0xA4, 0x16, 0x00, 0x00, 0xC8, 0x00, 0x00, 0x00, 0x66, 0xE0, 0x04, 0xA8, 0x35, 0x1D, 0x21, 0xF0, 0x99, 0xFC, 0x68, 0x46, 0x23, 0xF0, 0x28, 0xFB, 0x9A, 0xF8, 0x00, 0x00, 0x01, 0x28, 0x07, 0xD1, 0x28, 0x46, 0x05, 0xF0, 0xC3, 0xFE, 0x01, 0x46, 0x01, 0xAA, 0x00, 0x20, 0x21, 0xF0, 0x50, 0xF9, 0x28, 0x46, 0x05, 0xF0, 0xBB, 0xFE, 0x01, 0xA9, 0x21, 0xF0, 0x2A, 0xFA, 0xE9, 0x79, 0x4F, 0xEA, 0xE0, 0x00, 0x40, 0xB2, 0x11, 0xB1, 0x00, 0xF1, 0x06, 0x00, 0x40, 0xB2, 0xA8, 0x71, 0x1F, 0x38, 0x40, 0x00, 0xE8, 0x71, 0x30, 0x46 ,$/;"	v
+g_IRQnum	Adafruit_CC3000.cpp	/^uint8_t g_csPin, g_irqPin, g_vbatPin, g_IRQnum, g_SPIspeed;$/;"	v
+g_SPIspeed	Adafruit_CC3000.cpp	/^uint8_t g_csPin, g_irqPin, g_vbatPin, g_IRQnum, g_SPIspeed;$/;"	v
+g_csPin	Adafruit_CC3000.cpp	/^uint8_t g_csPin, g_irqPin, g_vbatPin, g_IRQnum, g_SPIspeed;$/;"	v
+g_irqPin	Adafruit_CC3000.cpp	/^uint8_t g_csPin, g_irqPin, g_vbatPin, g_IRQnum, g_SPIspeed;$/;"	v
+g_vbatPin	Adafruit_CC3000.cpp	/^uint8_t g_csPin, g_irqPin, g_vbatPin, g_IRQnum, g_SPIspeed;$/;"	v
+galois_mul2	utility/security.cpp	/^unsigned char galois_mul2(unsigned char value)$/;"	f
+gcSpiHandleRx	ccspi.h	/^typedef void (*gcSpiHandleRx)(void *p);$/;"	t
+gcSpiHandleTx	ccspi.h	/^typedef void (*gcSpiHandleTx)(void);$/;"	t
+getFirmwareVersion	Adafruit_CC3000.cpp	/^bool Adafruit_CC3000::getFirmwareVersion(uint8_t *major, uint8_t *minor)$/;"	f	class:Adafruit_CC3000
+getFreeRam	utility/debug.cpp	/^int getFreeRam(void) {$/;"	f
+getFreeRam	utility/debug.cpp	/^int getFreeRam(void)$/;"	f
+getHostByName	Adafruit_CC3000.cpp	/^uint16_t Adafruit_CC3000::getHostByName(char *hostname, uint32_t *ip) {$/;"	f	class:Adafruit_CC3000
+getIPAddress	Adafruit_CC3000.cpp	/^bool Adafruit_CC3000::getIPAddress(uint32_t *retip, uint32_t *netmask, uint32_t *gateway, uint32_t *dhcpserv, uint32_t *dnsserv)$/;"	f	class:Adafruit_CC3000
+getIPConfig	Adafruit_CC3000.cpp	/^bool Adafruit_CC3000::getIPConfig(tNetappIpconfigRetArgs *ipConfig)$/;"	f	class:Adafruit_CC3000
+getMacAddress	Adafruit_CC3000.cpp	/^bool Adafruit_CC3000::getMacAddress(uint8_t address[6])$/;"	f	class:Adafruit_CC3000
+getNextSSID	Adafruit_CC3000.cpp	/^uint8_t Adafruit_CC3000::getNextSSID(uint8_t *rssi, uint8_t *secMode, char *ssidname) {$/;"	f	class:Adafruit_CC3000
+getPCIntVersion	utility/PinChangeInt.h	/^uint16_t getPCIntVersion () {$/;"	f
+getStatus	Adafruit_CC3000.cpp	/^status_t Adafruit_CC3000::getStatus()$/;"	f	class:Adafruit_CC3000
+get_socket_active_status	utility/evnt_handler.cpp	/^get_socket_active_status(long Sd)$/;"	f
+gethostbyname	utility/socket.cpp	/^gethostbyname(const char * hostname, uint8_t usNameLen, uint32_t * out_ip_addr)$/;"	f
+getsockopt	utility/socket.cpp	/^getsockopt (long sd, long level, long optname, void *optval, socklen_t *optlen)$/;"	f
+hci_command_send	utility/hci.cpp	/^hci_command_send(unsigned short usOpcode, unsigned char *pucBuff,$/;"	f
+hci_data_command_send	utility/hci.cpp	/^void hci_data_command_send(unsigned short usOpcode, unsigned char *pucBuff,$/;"	f
+hci_data_send	utility/hci.cpp	/^hci_data_send(unsigned char ucOpcode, $/;"	f
+hci_event_handler	utility/evnt_handler.cpp	/^hci_event_handler(void *pRetParams, unsigned char *from, unsigned char *fromlen)$/;"	f
+hci_event_unsol_flowcontrol_handler	utility/evnt_handler.cpp	/^hci_event_unsol_flowcontrol_handler(char *pEvent)$/;"	f
+hci_patch_send	utility/hci.cpp	/^hci_patch_send(unsigned char ucOpcode, unsigned char *pucBuff, char *patch, unsigned short usDataLength)$/;"	f
+hci_unsol_event_handler	utility/evnt_handler.cpp	/^hci_unsol_event_handler(char *event_hdr)$/;"	f
+hci_unsol_handle_patch_request	utility/evnt_handler.cpp	/^void hci_unsol_handle_patch_request(char *event_hdr)$/;"	f
+hci_unsolicited_event_handler	utility/evnt_handler.cpp	/^hci_unsolicited_event_handler(void)$/;"	f
+hour	utility/sntp.h	/^	uint8_t	 hour;   \/\/\/< Hours since midnight (0..23)$/;"	m	struct:NetTime_t
+htonl	utility/socket.h	198;"	d
+htons	utility/socket.h	206;"	d
+iNumberOfBytes	utility/evnt_handler.h	/^    long             iNumberOfBytes;$/;"	m	struct:_bsd_read_return_t
+iSocketDescriptor	utility/evnt_handler.h	/^    long             iSocketDescriptor;$/;"	m	struct:_bsd_accept_return_t
+iSocketDescriptor	utility/evnt_handler.h	/^    long             iSocketDescriptor;$/;"	m	struct:_bsd_read_return_t
+iStatus	utility/evnt_handler.h	/^	char						iStatus;$/;"	m	struct:_bsd_getsockopt_return_t
+iStatus	utility/evnt_handler.h	/^    long					iStatus;$/;"	m	struct:_bsd_select_return_t
+iStatus	utility/evnt_handler.h	/^    long             iStatus;$/;"	m	struct:_bsd_accept_return_t
+in_addr	utility/socket.h	/^} in_addr;$/;"	t	typeref:struct:_in_addr_t
+init_spi	ccspi.cpp	/^int init_spi(void)$/;"	f
+intrCount	utility/PinChangeInt.h	/^	volatile uint8_t intrCount;$/;"	m	class:PCintPort
+isdst	utility/sntp.h	/^	bool	 isdst;  \/\/\/< Daylight savings time flag, currently not supported$/;"	m	struct:NetTime_t
+key	utility/wlan.cpp	/^unsigned char key[AES128_KEY_SIZE];$/;"	v
+lastPinView	utility/PinChangeInt.h	/^	volatile uint8_t		lastPinView;$/;"	m	class:PCintPort
+led_mask	utility/PinChangeInt.h	/^uint8_t led_mask;$/;"	v
+led_port	utility/PinChangeInt.h	/^volatile uint8_t *led_port;$/;"	v
+ledsetup	utility/PinChangeInt.h	/^void PCintPort::ledsetup(void) {$/;"	f	class:PCintPort
+ledsetup_run	utility/PinChangeInt.h	/^boolean ledsetup_run=false;$/;"	v
+listen	utility/socket.cpp	/^listen(long sd, long backlog)$/;"	f
+lookupPortNumToPort	utility/PinChangeInt.h	/^static PCintPort *lookupPortNumToPort( int portNum ) {$/;"	f
+m_NTPReferenceTime	utility/sntp.h	/^	SNTP_Timestamp_t	m_NTPReferenceTime;				\/\/base time for real-time clock real time = this + millisecond ticker$/;"	m	class:sntp
+m_change_DST	utility/sntp.h	/^	uint8_t				m_change_DST;					\/\/ 0 if no daylight savings time change, +1 if spring change, -1 if fall change$/;"	m	class:sntp
+m_cur_UTC_offset	utility/sntp.h	/^	SNTP_Timestamp_t*	m_cur_UTC_offset;				\/\/Current offset from UTC. Pointer to either std_UTC_offset or dst_UTC_offset$/;"	m	class:sntp
+m_dst_UTC_offset	utility/sntp.h	/^	SNTP_Timestamp_t	m_dst_UTC_offset;				\/\/Local daylight-savings-time offset from UTC. Ex: Eastern Daylght is UTC - 4 hours$/;"	m	class:sntp
+m_dst_end	utility/sntp.h	/^	SNTP_Timestamp_t	m_dst_end;						\/\/ next date when DST ends$/;"	m	class:sntp
+m_dst_start	utility/sntp.h	/^	SNTP_Timestamp_t	m_dst_start;					\/\/ next date when DST starts$/;"	m	class:sntp
+m_enable_dst	utility/sntp.h	/^	bool  		        m_enable_dst;					\/\/enable daylight savings time$/;"	m	class:sntp
+m_globalPool	utility/sntp.h	/^	NTP_Pool_t			m_globalPool;					\/\/list of global pool servers if no local servers respond$/;"	m	class:sntp
+m_localPool	utility/sntp.h	/^	NTP_Pool_t			m_localPool;					\/\/list of pool servers for current geographical location$/;"	m	class:sntp
+m_pollTime	utility/sntp.h	/^	uint32_t			m_pollTime;						\/\/ in seconds, how often to poll NTP to update clock$/;"	m	class:sntp
+m_std_UTC_offset	utility/sntp.h	/^	SNTP_Timestamp_t	m_std_UTC_offset;				\/\/Local standard-time offset from UTC. Example: Eastern Standard is UTC - 5 hours$/;"	m	class:sntp
+m_timeIsSet	utility/sntp.h	/^    bool				m_timeIsSet;					\/\/false = current time is not set$/;"	m	class:sntp
+m_timeStruct	utility/sntp.h	/^	NetTime_t			m_timeStruct;$/;"	m	class:sntp
+m_twelveHour	utility/sntp.h	/^	bool				m_twelveHour;					\/\/use 12-hour time when true, 24-hour time when false$/;"	m	class:sntp
+m_userServerCount	utility/sntp.h	/^	uint8_t				m_userServerCount;				\/\/number of NTP servers provded by user (not pool servers)$/;"	m	class:sntp
+m_userServerStrings	utility/sntp.h	/^	char				m_userServerStrings[MAX_NTP_SERVERS][MAX_URL_NAME+1]; \/\/storage for user's NTP server URL strings$/;"	m	class:sntp
+m_userServers	utility/sntp.h	/^	const char*			m_userServers[MAX_NTP_SERVERS];	\/\/list of NTP or NTP pool servers provided by user (pointers to userServerStrings)$/;"	m	class:sntp
+mask	utility/PinChangeInt.h	/^		uint8_t		mask;$/;"	m	class:PCintPort::PCintPin
+max_round_time	utility/netapp.h	/^	unsigned long max_round_time;$/;"	m	struct:_netapp_pingreport_args
+mday	utility/sntp.h	/^	uint8_t	 mday;   \/\/\/< Day of the month (1..31)$/;"	m	struct:NetTime_t
+mdnsAdvertiser	utility/socket.cpp	/^mdnsAdvertiser(unsigned short mdnsEnabled, char * deviceServiceName, unsigned short deviceServiceNameLength)$/;"	f
+millis	utility/sntp.h	/^	uint16_t millis; \/\/\/< Milliseconds after the second (0..999)$/;"	m	struct:NetTime_t
+min	utility/sntp.h	/^	uint8_t	 min;    \/\/\/< Minutes after the hour (0..59)$/;"	m	struct:NetTime_t
+min_round_time	utility/netapp.h	/^	unsigned long min_round_time;$/;"	m	struct:_netapp_pingreport_args
+mode	utility/PinChangeInt.h	/^		uint8_t 	mode;$/;"	m	class:PCintPort::PCintPin
+mode	utility/sntp.h	/^	SNTP_Mode_t          mode          : 3;$/;"	m	struct:SNTP_Message_t
+mon	utility/sntp.h	/^	uint8_t	 mon;    \/\/\/< Months since January (0..11)$/;"	m	struct:NetTime_t
+monthDays	utility/sntp.cpp	/^char    monthDays[12] = { 31,  28,  31,  30,  31,  30,  31,  31,  30,  31,  30,  31};$/;"	v
+netapp_arp_flush	utility/netapp.cpp	/^long netapp_arp_flush(void)$/;"	f
+netapp_config_mac_adrress	utility/netapp.cpp	/^long netapp_config_mac_adrress(unsigned char * mac)$/;"	f
+netapp_dhcp	utility/netapp.cpp	/^long netapp_dhcp(unsigned long *aucIP, unsigned long *aucSubnetMask,unsigned long *aucDefaultGateway, unsigned long *aucDNSServer)$/;"	f
+netapp_ipconfig	utility/netapp.cpp	/^void netapp_ipconfig( tNetappIpconfigRetArgs * ipconfig )$/;"	f
+netapp_ping_report	utility/netapp.cpp	/^void netapp_ping_report()$/;"	f
+netapp_ping_send	utility/netapp.cpp	/^netapp_ping_send(uint32_t *ip, uint32_t ulPingAttempts, uint32_t ulPingSize, uint32_t ulPingTimeout)$/;"	f
+netapp_ping_stop	utility/netapp.cpp	/^long netapp_ping_stop()$/;"	f
+netapp_pingreport_args_t	utility/netapp.h	/^} netapp_pingreport_args_t;$/;"	t	typeref:struct:_netapp_pingreport_args
+netapp_set_debug_level	utility/netapp.cpp	/^long netapp_set_debug_level(unsigned long ulLevel)$/;"	f
+netapp_timeout_values	utility/netapp.cpp	/^netapp_timeout_values(unsigned long *aucDHCP, unsigned long *aucARP,unsigned long *aucKeepalive,	unsigned long *aucInactivity)$/;"	f
+next	utility/PinChangeInt.h	/^		PCintPin* next;$/;"	m	class:PCintPort::PCintPin
+no_warning	utility/sntp.h	/^typedef enum SNTP_LI_t	{	no_warning = 0,$/;"	e	enum:SNTP_LI_t
+not_led_mask	utility/PinChangeInt.h	/^uint8_t not_led_mask;$/;"	v
+ntohl	utility/socket.h	203;"	d
+ntohs	utility/socket.h	210;"	d
+ntp_global_pool_list	utility/sntp.cpp	/^const char* ntp_global_pool_list[] =  {   "0.pool.ntp.org",$/;"	v
+ntp_us_pool_list	utility/sntp.cpp	/^const char* ntp_us_pool_list[] =  {	"0.us.pool.ntp.org",$/;"	v
+num_networks	Adafruit_CC3000.h	/^	uint32_t	num_networks;$/;"	m	struct:Result_Struct
+nvmem_create_entry	utility/nvmem.cpp	/^nvmem_create_entry(unsigned long ulFileId, unsigned long ulNewLen)$/;"	f
+nvmem_get_mac_address	utility/nvmem.cpp	/^unsigned char nvmem_get_mac_address(unsigned char *mac)$/;"	f
+nvmem_read	utility/nvmem.cpp	/^nvmem_read(unsigned long ulFileId, unsigned long ulLength, unsigned long ulOffset, unsigned char *buff)$/;"	f
+nvmem_read_sp_version	utility/nvmem.cpp	/^uint8_t nvmem_read_sp_version(uint8_t* patchVer)$/;"	f
+nvmem_set_mac_address	utility/nvmem.cpp	/^unsigned char nvmem_set_mac_address(unsigned char *mac)$/;"	f
+nvmem_write	utility/nvmem.cpp	/^nvmem_write(unsigned long ulFileId, unsigned long ulLength, unsigned long $/;"	f
+nvmem_write_patch	utility/nvmem.cpp	/^unsigned char nvmem_write_patch(unsigned long ulFileId, unsigned long spLength, const uint8_t *spData)$/;"	f
+operator =	Adafruit_CC3000.cpp	/^void Adafruit_CC3000_Client::operator=(const Adafruit_CC3000_Client& other) {$/;"	f	class:Adafruit_CC3000_Client
+operator bool	Adafruit_CC3000_Server.cpp	/^Adafruit_CC3000_ClientRef::operator bool() {$/;"	f	class:Adafruit_CC3000_ClientRef
+outputAddress	utility/evnt_handler.h	/^    long             outputAddress;$/;"	m	struct:_bsd_gethostbyname_return_t
+pRxPacket	ccspi.cpp	/^  unsigned char *pRxPacket;$/;"	m	struct:__anon3	file:
+pTxPacket	ccspi.cpp	/^  unsigned char *pTxPacket;$/;"	m	struct:__anon3	file:
+packets_received	utility/netapp.h	/^	unsigned long packets_received;$/;"	m	struct:_netapp_pingreport_args
+packets_sent	utility/netapp.h	/^	unsigned long packets_sent;$/;"	m	struct:_netapp_pingreport_args
+pcint_multi	utility/PinChangeInt.h	/^	static volatile uint8_t pcint_multi;$/;"	m	class:PCintPort
+pcint_multi	utility/PinChangeInt.h	/^volatile uint8_t PCintPort::pcint_multi=0;$/;"	m	class:PCintPort
+pinState	utility/PinChangeInt.h	/^	static volatile	uint8_t	pinState;$/;"	m	class:PCintPort
+pinState	utility/PinChangeInt.h	/^volatile uint8_t PCintPort::pinState=0;$/;"	m	class:PCintPort
+ping	Adafruit_CC3000.cpp	/^uint16_t Adafruit_CC3000::ping(uint32_t ip, uint8_t attempts, uint16_t timeout, uint8_t size) {$/;"	f	class:Adafruit_CC3000
+pingReport	Adafruit_CC3000.cpp	/^netapp_pingreport_args_t pingReport;$/;"	v
+pingReportnum	Adafruit_CC3000.cpp	/^uint8_t pingReportnum;$/;"	v
+pinmode	utility/PinChangeInt.h	/^	static volatile uint8_t pinmode;$/;"	m	class:PCintPort
+pinmode	utility/PinChangeInt.h	/^volatile uint8_t PCintPort::pinmode=0;$/;"	m	class:PCintPort
+poll	utility/sntp.h	/^	char                 poll;$/;"	m	struct:SNTP_Message_t
+portA	utility/PinChangeInt.h	/^PCintPort portA=PCintPort(1, 0,PCMSK0); \/\/ port PB==2  (from Arduino.h, Arduino version 1.0)$/;"	v
+portB	utility/PinChangeInt.h	/^PCintPort portB=PCintPort(2, 0,PCMSK0); \/\/ port PB==2  (from Arduino.h, Arduino version 1.0)$/;"	v
+portB	utility/PinChangeInt.h	/^PCintPort portB=PCintPort(2, 1,PCMSK1); \/\/ port PB==2  (from Arduino.h, Arduino version 1.0)$/;"	v
+portC	utility/PinChangeInt.h	/^PCintPort portC=PCintPort(3, 1,PCMSK1); \/\/ port PC==3  (also in pins_arduino.c, Arduino version 022)$/;"	v
+portC	utility/PinChangeInt.h	/^PCintPort portC=PCintPort(3, 2,PCMSK2); \/\/ port PC==3  (also in pins_arduino.c, Arduino version 022)$/;"	v
+portD	utility/PinChangeInt.h	/^PCintPort portD=PCintPort(4, 2,PCMSK2); \/\/ port PD==4$/;"	v
+portD	utility/PinChangeInt.h	/^PCintPort portD=PCintPort(4, 3,PCMSK3); \/\/ port PD==4$/;"	v
+portFallingPins	utility/PinChangeInt.h	/^	volatile	uint8_t			portFallingPins;$/;"	m	class:PCintPort
+portInputReg	utility/PinChangeInt.h	/^	volatile	uint8_t&		portInputReg;$/;"	m	class:PCintPort
+portJ	utility/PinChangeInt.h	/^PCintPort portJ=PCintPort(10,1,PCMSK1); \/\/ port PJ==10 $/;"	v
+portK	utility/PinChangeInt.h	/^PCintPort portK=PCintPort(11,2,PCMSK2); \/\/ port PK==11$/;"	v
+portPCMask	utility/PinChangeInt.h	/^	volatile	uint8_t&		portPCMask;$/;"	m	class:PCintPort
+portRisingPins	utility/PinChangeInt.h	/^	volatile	uint8_t			portRisingPins;$/;"	m	class:PCintPort
+precision	utility/sntp.h	/^	char                 precision;$/;"	m	struct:SNTP_Message_t
+primary	utility/sntp.h	/^	uint8_t primary       : 1;$/;"	m	struct:SNTP_Stratum_t
+printDec	utility/debug.cpp	/^void printDec(uint8_t h) {$/;"	f
+printDec16	utility/debug.cpp	/^void printDec16(uint16_t h) {$/;"	f
+printHex	Adafruit_CC3000.cpp	/^void Adafruit_CC3000::printHex(const byte * data, const uint32_t numBytes)$/;"	f	class:Adafruit_CC3000
+printHex	utility/debug.cpp	/^void printHex(uint8_t h) {$/;"	f
+printHex16	utility/debug.cpp	/^void printHex16(uint16_t h) {$/;"	f
+printHexChar	Adafruit_CC3000.cpp	/^void Adafruit_CC3000::printHexChar(const byte * data, const uint32_t numBytes)$/;"	f	class:Adafruit_CC3000
+printIPdots	Adafruit_CC3000.cpp	/^void Adafruit_CC3000::printIPdots(uint32_t ip) {$/;"	f	class:Adafruit_CC3000
+printIPdotsRev	Adafruit_CC3000.cpp	/^void Adafruit_CC3000::printIPdotsRev(uint32_t ip) {$/;"	f	class:Adafruit_CC3000
+process_connection	tests/listener.py	/^def process_connection(client):$/;"	f
+profileArray	utility/wlan.cpp	/^unsigned char profileArray[SMART_CONFIG_PROFILE_SIZE];$/;"	v
+prog_char	utility/debug.h	/^typedef char PROGMEM prog_char;$/;"	t
+pucReceivedData	utility/cc3000_common.h	/^	unsigned char 	*pucReceivedData;$/;"	m	struct:__anon1
+pucTxCommandBuffer	utility/cc3000_common.h	/^	unsigned char 	*pucTxCommandBuffer;$/;"	m	struct:__anon1
+read	Adafruit_CC3000.cpp	/^int16_t Adafruit_CC3000_Client::read(void *buf, uint16_t len, uint32_t flags) $/;"	f	class:Adafruit_CC3000_Client
+read	Adafruit_CC3000.cpp	/^uint8_t Adafruit_CC3000_Client::read(void) $/;"	f	class:Adafruit_CC3000_Client
+read	Adafruit_CC3000_Server.cpp	/^int16_t Adafruit_CC3000_ClientRef::read(void *buf, uint16_t len, uint32_t flags) {$/;"	f	class:Adafruit_CC3000_ClientRef
+read	Adafruit_CC3000_Server.cpp	/^uint8_t Adafruit_CC3000_ClientRef::read(void) {$/;"	f	class:Adafruit_CC3000_ClientRef
+read	utility/socket.cpp	71;"	d	file:
+reboot	Adafruit_CC3000.cpp	/^void Adafruit_CC3000::reboot(uint8_t patch)$/;"	f	class:Adafruit_CC3000
+recv	utility/socket.cpp	/^recv(long sd, void *buf, long len, long flags)$/;"	f
+recvfrom	utility/socket.cpp	/^recvfrom(long sd, void *buf, long len, long flags, sockaddr *from,$/;"	f
+referenceID	utility/sntp.h	/^	uint32_t             referenceID;$/;"	m	struct:SNTP_Message_t
+reserved	utility/sntp.h	/^	uint8_t reserved      : 4;$/;"	m	struct:SNTP_Stratum_t
+reserved	utility/sntp.h	/^typedef enum SNTP_Mode_t {	reserved = 0,$/;"	e	enum:SNTP_Mode_t
+reserved_control	utility/sntp.h	/^							reserved_control,$/;"	e	enum:SNTP_Mode_t
+reserved_private	utility/sntp.h	/^							reserved_private$/;"	e	enum:SNTP_Mode_t
+reset	Adafruit_CC3000.cpp	/^  void reset(const byte flag) {$/;"	f	class:CC3000BitSet
+retVal	utility/evnt_handler.h	/^    long             retVal;$/;"	m	struct:_bsd_gethostbyname_return_t
+rsbox	utility/security.cpp	/^const unsigned char rsbox[256] =$/;"	v
+rssiByte	Adafruit_CC3000.h	/^	uint8_t 	rssiByte;$/;"	m	struct:Result_Struct
+sBootLoaderPatches	utility/cc3000_common.h	/^	tBootLoaderPatches 	sBootLoaderPatches;$/;"	m	struct:__anon1
+sDriverPatches	utility/cc3000_common.h	/^	tDriverPatches 		sDriverPatches;$/;"	m	struct:__anon1
+sFWPatches	utility/cc3000_common.h	/^	tFWPatches 			sFWPatches;$/;"	m	struct:__anon1
+sSimplLinkInformation	utility/cc3000_common.h	/^}sSimplLinkInformation;$/;"	t	typeref:struct:__anon1
+sSpiInformation	ccspi.cpp	/^tSpiInformation sSpiInformation;$/;"	v
+sWlanCB	utility/cc3000_common.h	/^	tWlanCB	 			sWlanCB;$/;"	m	struct:__anon1
+s_PORT	utility/PinChangeInt.h	/^	static volatile char s_PORT;$/;"	m	class:PCintPort
+s_PORT	utility/PinChangeInt.h	/^volatile char	 PCintPort::s_PORT='x';$/;"	m	class:PCintPort
+s_addr	utility/socket.h	/^    unsigned long s_addr;                   \/\/ load with inet_aton()$/;"	m	struct:_in_addr_t
+s_changedPins	utility/PinChangeInt.h	/^	static volatile uint8_t s_changedPins;$/;"	m	class:PCintPort
+s_changedPins	utility/PinChangeInt.h	/^volatile uint8_t PCintPort::s_changedPins=0;$/;"	m	class:PCintPort
+s_count	utility/PinChangeInt.h	/^	static volatile uint8_t s_count;$/;"	m	class:PCintPort
+s_count	utility/PinChangeInt.h	/^volatile uint8_t PCintPort::s_count=0;$/;"	m	class:PCintPort
+s_currXORlastPinView	utility/PinChangeInt.h	/^	static volatile uint8_t s_currXORlastPinView;$/;"	m	class:PCintPort
+s_currXORlastPinView	utility/PinChangeInt.h	/^volatile uint8_t PCintPort::s_currXORlastPinView=0;$/;"	m	class:PCintPort
+s_lastPinView	utility/PinChangeInt.h	/^	static volatile uint8_t s_lastPinView;$/;"	m	class:PCintPort
+s_lastPinView	utility/PinChangeInt.h	/^volatile uint8_t PCintPort::s_lastPinView=0;$/;"	m	class:PCintPort
+s_pmask	utility/PinChangeInt.h	/^	static volatile uint8_t s_pmask;$/;"	m	class:PCintPort
+s_pmask	utility/PinChangeInt.h	/^volatile uint8_t PCintPort::s_pmask=0;$/;"	m	class:PCintPort
+s_portFallingPins	utility/PinChangeInt.h	/^	static volatile uint8_t s_portFallingPins;$/;"	m	class:PCintPort
+s_portFallingPins	utility/PinChangeInt.h	/^volatile uint8_t PCintPort::s_portFallingPins=0;$/;"	m	class:PCintPort
+s_portFallingPins_nNCurr	utility/PinChangeInt.h	/^	static volatile uint8_t s_portFallingPins_nNCurr;$/;"	m	class:PCintPort
+s_portFallingPins_nNCurr	utility/PinChangeInt.h	/^volatile uint8_t PCintPort::s_portFallingPins_nNCurr=0;$/;"	m	class:PCintPort
+s_portRisingPins	utility/PinChangeInt.h	/^	static volatile uint8_t s_portRisingPins;$/;"	m	class:PCintPort
+s_portRisingPins	utility/PinChangeInt.h	/^volatile uint8_t PCintPort::s_portRisingPins=0;$/;"	m	class:PCintPort
+s_portRisingPins_nCurr	utility/PinChangeInt.h	/^	static volatile uint8_t s_portRisingPins_nCurr;$/;"	m	class:PCintPort
+s_portRisingPins_nCurr	utility/PinChangeInt.h	/^volatile uint8_t PCintPort::s_portRisingPins_nCurr=0;$/;"	m	class:PCintPort
+sa_data	utility/socket.h	/^    unsigned char     sa_data[14];$/;"	m	struct:_sockaddr_t
+sa_family	utility/socket.h	/^    unsigned short int    sa_family;$/;"	m	struct:_sockaddr_t
+sbox	utility/security.cpp	/^const unsigned char sbox[256] =   { $/;"	v
+scanSSIDs	Adafruit_CC3000.cpp	/^bool Adafruit_CC3000::scanSSIDs(uint32_t time)$/;"	f	class:Adafruit_CC3000
+scan_status	Adafruit_CC3000.h	/^	uint32_t 	scan_status;$/;"	m	struct:Result_Struct
+sec	utility/sntp.h	/^	uint8_t	 sec;    \/\/\/< Seconds after the minute (0..59)$/;"	m	struct:NetTime_t
+secondary	utility/sntp.h	/^	uint8_t secondary     : 3;$/;"	m	struct:SNTP_Stratum_t
+seconds	utility/sntp.h	/^	uint32_t  seconds;$/;"	m	struct:SNTP_Timestamp_t
+select	utility/socket.cpp	/^select(long nfds, fd_set *readsds, fd_set *writesds, fd_set *exceptsds, $/;"	f
+send	utility/socket.cpp	/^send(long sd, const void *buf, long len, long flags)$/;"	f
+sendBootLoaderPatch	ccspi.cpp	/^char *sendBootLoaderPatch(unsigned long *Length) {$/;"	f
+sendDriverPatch	ccspi.cpp	/^char *sendDriverPatch(unsigned long *Length) {$/;"	f
+sendWLFWPatch	ccspi.cpp	/^char *sendWLFWPatch(unsigned long *Length) {$/;"	f
+sendto	utility/socket.cpp	/^sendto(long sd, const void *buf, long len, long flags, const sockaddr *to,$/;"	f
+server	tests/listener.py	/^server = socket(AF_INET, SOCK_STREAM)$/;"	v
+server	utility/sntp.h	/^							server,$/;"	e	enum:SNTP_Mode_t
+set	Adafruit_CC3000.cpp	/^  void set(const byte flag) {$/;"	f	class:CC3000BitSet
+setMacAddress	Adafruit_CC3000.cpp	/^bool Adafruit_CC3000::setMacAddress(uint8_t address[6])$/;"	f	class:Adafruit_CC3000
+setPrinter	Adafruit_CC3000.cpp	/^void Adafruit_CC3000::setPrinter(Print* p) {$/;"	f	class:Adafruit_CC3000
+set_socket_active_status	utility/evnt_handler.cpp	/^void set_socket_active_status(long Sd, long Status)$/;"	f
+setsockopt	utility/socket.cpp	/^setsockopt(long sd, long level, long optname, const void *optval,$/;"	f
+simple_link_recv	utility/socket.cpp	/^simple_link_recv(long sd, void *buf, long len, long flags, sockaddr *from,$/;"	f
+simple_link_send	utility/socket.cpp	/^simple_link_send(long sd, const void *buf, long len, long flags,$/;"	f
+sin_addr	utility/socket.h	/^    in_addr          sin_addr;              \/\/ see struct in_addr, below$/;"	m	struct:_sockaddr_in_t
+sin_family	utility/socket.h	/^    short            sin_family;            \/\/ e.g. AF_INET$/;"	m	struct:_sockaddr_in_t
+sin_port	utility/socket.h	/^    unsigned short   sin_port;              \/\/ e.g. htons(3490)$/;"	m	struct:_sockaddr_in_t
+sin_zero	utility/socket.h	/^    char             sin_zero[8];           \/\/ zero this if you want to$/;"	m	struct:_sockaddr_in_t
+sixty_One	utility/sntp.h	/^							sixty_One,$/;"	e	enum:SNTP_LI_t
+slTransmitDataError	utility/cc3000_common.h	/^	signed long		 slTransmitDataError;$/;"	m	struct:__anon1
+sntp	utility/sntp.cpp	/^sntp::sntp()$/;"	f	class:sntp
+sntp	utility/sntp.cpp	/^sntp::sntp(char* ntp_server_url1, char* ntp_server_url2, short local_utc_offset)$/;"	f	class:sntp
+sntp	utility/sntp.cpp	/^sntp::sntp(char* ntp_server_url1, char* ntp_server_url2, short local_utc_offset, short dst_utc_offset, bool enable_dst)$/;"	f	class:sntp
+sntp	utility/sntp.cpp	/^sntp::sntp(char* ntp_server_url1, short local_utc_offset)$/;"	f	class:sntp
+sntp	utility/sntp.cpp	/^sntp::sntp(char* ntp_server_url1, short local_utc_offset, short dst_utc_offset, bool enable_dst)$/;"	f	class:sntp
+sntp	utility/sntp.h	/^class sntp$/;"	c
+sockaddr	utility/socket.h	/^} sockaddr;$/;"	t	typeref:struct:_sockaddr_t
+sockaddr_in	utility/socket.h	/^} sockaddr_in;$/;"	t	typeref:struct:_sockaddr_in_t
+socket	utility/socket.cpp	/^socket(long domain, long type, long protocol)$/;"	f
+socket_active_status	utility/evnt_handler.cpp	/^unsigned long socket_active_status = SOCKET_STATUS_INIT_VAL;$/;"	v
+socklen_t	utility/socket.h	/^typedef unsigned long socklen_t;$/;"	t
+spi_buffer	ccspi.cpp	/^char spi_buffer[CC3000_RX_BUFFER_SIZE];$/;"	v
+ssid_name	Adafruit_CC3000.h	/^	uint8_t 	ssid_name[32];$/;"	m	struct:Result_Struct
+startSSIDscan	Adafruit_CC3000.cpp	/^uint16_t Adafruit_CC3000::startSSIDscan() {$/;"	f	class:Adafruit_CC3000
+startSmartConfig	Adafruit_CC3000.cpp	/^bool Adafruit_CC3000::startSmartConfig(bool enableAES)$/;"	f	class:Adafruit_CC3000
+status_t	Adafruit_CC3000.h	/^} status_t;$/;"	t	typeref:enum:__anon4
+stop	Adafruit_CC3000.cpp	/^void Adafruit_CC3000::stop(void)$/;"	f	class:Adafruit_CC3000
+stopSSIDscan	Adafruit_CC3000.cpp	/^void Adafruit_CC3000::stopSSIDscan(void) {$/;"	f	class:Adafruit_CC3000
+stratum	utility/sntp.h	/^	SNTP_Stratum_t       stratum;$/;"	m	struct:SNTP_Message_t
+suseconds_t	utility/cc3000_common.h	/^typedef long suseconds_t;$/;"	t
+sym_active	utility/sntp.h	/^							sym_active,$/;"	e	enum:SNTP_Mode_t
+sym_passive	utility/sntp.h	/^							sym_passive,$/;"	e	enum:SNTP_Mode_t
+sys	tests/listener.py	/^import sys$/;"	i
+tBootLoaderPatches	utility/cc3000_common.h	/^typedef char *(*tBootLoaderPatches)(unsigned long *usLength);$/;"	t
+tBsdGetSockOptReturnParams	utility/evnt_handler.h	/^} tBsdGetSockOptReturnParams;$/;"	t	typeref:struct:_bsd_getsockopt_return_t
+tBsdGethostbynameParams	utility/evnt_handler.h	/^} tBsdGethostbynameParams;$/;"	t	typeref:struct:_bsd_gethostbyname_return_t
+tBsdReadReturnParams	utility/evnt_handler.h	/^} tBsdReadReturnParams;$/;"	t	typeref:struct:_bsd_read_return_t
+tBsdReturnParams	utility/evnt_handler.h	/^} tBsdReturnParams;$/;"	t	typeref:struct:_bsd_accept_return_t
+tBsdSelectRecvParams	utility/evnt_handler.h	/^} tBsdSelectRecvParams;$/;"	t	typeref:struct:_bsd_select_return_t
+tDriverPatches	utility/cc3000_common.h	/^typedef char *(*tDriverPatches)(unsigned long *usLength);$/;"	t
+tFWPatches	utility/cc3000_common.h	/^typedef char *(*tFWPatches)(unsigned long *usLength);$/;"	t
+tNetappDhcpParams	utility/netapp.h	/^}tNetappDhcpParams;$/;"	t	typeref:struct:_netapp_dhcp_ret_args_t
+tNetappIpconfigRetArgs	utility/netapp.h	/^}tNetappIpconfigRetArgs;$/;"	t	typeref:struct:_netapp_ipconfig_ret_args_t
+tSLInformation	utility/wlan.cpp	/^volatile sSimplLinkInformation tSLInformation;$/;"	v
+tSocketAddress	utility/evnt_handler.h	/^    sockaddr   		tSocketAddress;$/;"	m	struct:_bsd_accept_return_t
+tSpiInformation	ccspi.cpp	/^} tSpiInformation;$/;"	t	typeref:struct:__anon3	file:
+tSpiReadHeader	ccspi.cpp	/^unsigned char tSpiReadHeader[] = {READ, 0, 0, 0, 0};$/;"	v
+tWlanCB	utility/cc3000_common.h	/^typedef void (*tWlanCB)(long event_type, char * data, unsigned char length );$/;"	t
+tWlanInterruptDisable	utility/cc3000_common.h	/^typedef void (*tWlanInterruptDisable)(void);$/;"	t
+tWlanInterruptEnable	utility/cc3000_common.h	/^typedef void (*tWlanInterruptEnable)(void);$/;"	t
+tWlanReadInteruptPin	utility/cc3000_common.h	/^typedef long (*tWlanReadInteruptPin)(void);$/;"	t
+tWriteWlanPin	utility/cc3000_common.h	/^typedef void (*tWriteWlanPin)(unsigned char val);$/;"	t
+test	Adafruit_CC3000.cpp	/^  bool test(const byte flag) {$/;"	f	class:CC3000BitSet
+thread	tests/listener.py	/^		thread = threading.Thread(target=process_connection, args=(client,))$/;"	v
+threading	tests/listener.py	/^import threading$/;"	i
+time	Adafruit_CC3000.h	/^	uint16_t 	time;$/;"	m	struct:Result_Struct
+time_t	utility/cc3000_common.h	/^typedef long time_t;$/;"	t
+time_t	utility/cc3000_common.h	/^typedef unsigned long time_t;  \/* KTown: Updated to be compatible with Arduino Time.h *\/$/;"	t
+timeval	utility/cc3000_common.h	/^struct timeval $/;"	s
+timeval	utility/cc3000_common.h	/^typedef struct timeval timeval;$/;"	t	typeref:struct:timeval
+tsOriginate	utility/sntp.h	/^	SNTP_Timestamp_t     tsOriginate;$/;"	m	struct:SNTP_Message_t
+tsReceive	utility/sntp.h	/^	SNTP_Timestamp_t     tsReceive;$/;"	m	struct:SNTP_Message_t
+tsReference	utility/sntp.h	/^	SNTP_Timestamp_t     tsReference;$/;"	m	struct:SNTP_Message_t
+tsTransmit	utility/sntp.h	/^	SNTP_Timestamp_t     tsTransmit;$/;"	m	struct:SNTP_Message_t
+tv_sec	utility/cc3000_common.h	/^    time_t         tv_sec;                  \/* seconds *\/$/;"	m	struct:timeval
+tv_usec	utility/cc3000_common.h	/^    suseconds_t    tv_usec;                 \/* microseconds *\/$/;"	m	struct:timeval
+uaMacAddr	utility/netapp.h	/^	unsigned char uaMacAddr[6];$/;"	m	struct:_netapp_ipconfig_ret_args_t
+uaSSID	utility/netapp.h	/^	unsigned char uaSSID[32];$/;"	m	struct:_netapp_ipconfig_ret_args_t
+uart_putchar	utility/debug.cpp	/^void uart_putchar(char c) {$/;"	f
+ucOptValue	utility/evnt_handler.h	/^	unsigned char			ucOptValue[4];$/;"	m	struct:_bsd_getsockopt_return_t
+uiExfd	utility/evnt_handler.h	/^	unsigned long 			uiExfd;$/;"	m	struct:_bsd_select_return_t
+uiFlags	utility/evnt_handler.h	/^    unsigned long	 uiFlags;$/;"	m	struct:_bsd_read_return_t
+uiRdfd	utility/evnt_handler.h	/^	unsigned long 			uiRdfd;$/;"	m	struct:_bsd_select_return_t
+uiWrfd	utility/evnt_handler.h	/^	unsigned long 			uiWrfd;$/;"	m	struct:_bsd_select_return_t
+ulSocket	Adafruit_CC3000.cpp	/^volatile long ulSocket;$/;"	v
+ulSpiState	ccspi.cpp	/^  unsigned long  ulSpiState;$/;"	m	struct:__anon3	file:
+update_socket_active_status	utility/evnt_handler.cpp	/^update_socket_active_status(char *resp_params)$/;"	f
+usBufferSize	utility/cc3000_common.h	/^	unsigned short	 usBufferSize;$/;"	m	struct:__anon1
+usEventOrDataReceived	utility/cc3000_common.h	/^	unsigned short	 usEventOrDataReceived;$/;"	m	struct:__anon1
+usNumberOfFreeBuffers	utility/cc3000_common.h	/^	unsigned short	 usNumberOfFreeBuffers;$/;"	m	struct:__anon1
+usRxDataPending	utility/cc3000_common.h	/^	unsigned short	 usRxDataPending;$/;"	m	struct:__anon1
+usRxEventOpcode	utility/cc3000_common.h	/^	unsigned short	 usRxEventOpcode;$/;"	m	struct:__anon1
+usRxPacketLength	ccspi.cpp	/^  unsigned short usRxPacketLength;$/;"	m	struct:__anon3	file:
+usSlBufferLength	utility/cc3000_common.h	/^	unsigned short	 usSlBufferLength;$/;"	m	struct:__anon1
+usTxPacketLength	ccspi.cpp	/^  unsigned short usTxPacketLength;$/;"	m	struct:__anon3	file:
+wday	utility/sntp.h	/^	uint8_t	 wday;	 \/\/\/< Days since Sunday (0..6)$/;"	m	struct:NetTime_t
+wlan_add_profile	utility/wlan.cpp	/^wlan_add_profile(unsigned long ulSecType,$/;"	f
+wlan_connect	utility/wlan.cpp	/^wlan_connect(const char *ssid, long ssid_len)$/;"	f
+wlan_connect	utility/wlan.cpp	/^wlan_connect(unsigned long ulSecType, const char *ssid, long ssid_len,$/;"	f
+wlan_disconnect	utility/wlan.cpp	/^wlan_disconnect()$/;"	f
+wlan_drv_patch	examples/driverpatch_1_12/driverpatchinc.h	/^unsigned char PROGMEM wlan_drv_patch[8076] = { 0x00, 0x01, 0x00, 0x00, 0x84, 0x1F, 0x00, 0x00, 0xF0, 0x03, 0x18, 0x00, 0xE4, 0x62, 0x08, 0x00, 0x96, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 ,$/;"	v
+wlan_init	utility/wlan.cpp	/^void wlan_init(	tWlanCB 				sWlanCB,$/;"	f
+wlan_ioctl_del_profile	utility/wlan.cpp	/^wlan_ioctl_del_profile(unsigned long ulIndex)$/;"	f
+wlan_ioctl_get_scan_results	utility/wlan.cpp	/^wlan_ioctl_get_scan_results(unsigned long ulScanTimeout,$/;"	f
+wlan_ioctl_set_connection_policy	utility/wlan.cpp	/^wlan_ioctl_set_connection_policy(unsigned long should_connect_to_open_ap,$/;"	f
+wlan_ioctl_set_scan_params	utility/wlan.cpp	/^wlan_ioctl_set_scan_params(unsigned long uiEnable, unsigned long uiMinDwellTime,$/;"	f
+wlan_ioctl_statusget	utility/wlan.cpp	/^wlan_ioctl_statusget(void)$/;"	f
+wlan_set_event_mask	utility/wlan.cpp	/^wlan_set_event_mask(unsigned long ulMask)$/;"	f
+wlan_smart_config_process	utility/wlan.cpp	/^wlan_smart_config_process()$/;"	f
+wlan_smart_config_set_prefix	utility/wlan.cpp	/^wlan_smart_config_set_prefix(char* cNewPrefix)$/;"	f
+wlan_smart_config_start	utility/wlan.cpp	/^wlan_smart_config_start(unsigned long algoEncryptedFlag)$/;"	f
+wlan_smart_config_stop	utility/wlan.cpp	/^wlan_smart_config_stop(void)$/;"	f
+wlan_start	utility/wlan.cpp	/^wlan_start(unsigned short usPatchesAvailableAtHost)$/;"	f
+wlan_stop	utility/wlan.cpp	/^wlan_stop(void)$/;"	f
+wlan_tx_buffer	ccspi.cpp	/^unsigned char wlan_tx_buffer[CC3000_TX_BUFFER_SIZE];$/;"	v
+write	Adafruit_CC3000.cpp	/^int16_t Adafruit_CC3000_Client::write(const void *buf, uint16_t len, uint32_t flags)$/;"	f	class:Adafruit_CC3000_Client
+write	Adafruit_CC3000.cpp	/^size_t Adafruit_CC3000_Client::write(uint8_t c)$/;"	f	class:Adafruit_CC3000_Client
+write	Adafruit_CC3000_Server.cpp	/^int16_t Adafruit_CC3000_ClientRef::write(const void *buf, uint16_t len, uint32_t flags) {$/;"	f	class:Adafruit_CC3000_ClientRef
+write	Adafruit_CC3000_Server.cpp	/^size_t Adafruit_CC3000_ClientRef::write(uint8_t c) {$/;"	f	class:Adafruit_CC3000_ClientRef
+write	Adafruit_CC3000_Server.cpp	/^size_t Adafruit_CC3000_Server::write(const uint8_t *buffer, size_t size) {$/;"	f	class:Adafruit_CC3000_Server
+write	Adafruit_CC3000_Server.cpp	/^size_t Adafruit_CC3000_Server::write(uint8_t value) {$/;"	f	class:Adafruit_CC3000_Server
+write	utility/socket.cpp	72;"	d	file:
+yday	utility/sntp.h	/^	uint16_t yday;   \/\/\/< Days since January 1 (0..365)$/;"	m	struct:NetTime_t
+year	utility/sntp.h	/^	uint16_t year;   \/\/\/< Year.$/;"	m	struct:NetTime_t
+~sntp	utility/sntp.h	/^	virtual ~sntp() {};$/;"	f	class:sntp
