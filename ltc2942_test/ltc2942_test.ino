@@ -21,8 +21,9 @@ void setup() {
 }
 
 void loop() {
-  p(ltc.getCharge()); p("\t");
-  p(ltc.getVoltage()); p("\t");
-  p(ltc.getTemperature()); p("\n");
+  ltc2942_measurement_t m = ltc.getMeasurement();
+  p(m.batteryCharge); p("\t");
+  p(m.batteryVoltage); p("\t");
+  p(m.temperature); p("\n");
   delay(500);
 }
