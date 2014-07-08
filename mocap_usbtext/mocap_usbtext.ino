@@ -12,10 +12,10 @@ void setup() {
 
   Serial.println(  sen.testConnection() ? "OK" : "FAILED");
 
-  sen.setGyroFullScale(2000);
+  sen.setGyroFullScale(250);
   sen.setGyroOutputDataRate(LSM9DS0_RATE_95);
-  sen.setGyroBandwidthCutOffMode(LSM9DS0_BW_LOW);
-  sen.setGyroDataFilter(LSM9DS0_LOW_PASS);
+  //sen.setGyroBandwidthCutOffMode(LSM9DS0_BW_LOW);
+  //sen.setGyroDataFilter(LSM9DS0_LOW_PASS);
 
   sen.setAccRate(LSM9DS0_ACC_RATE_100);
   sen.setAccFullScale(LSM9DS0_ACC_2G);
@@ -30,13 +30,13 @@ void setup() {
 unsigned long time=0;
 void loop() {
    time = micros();
-   measurement_t m = sen.getMeasurement();
+   lsm9d_measurement_t m = sen.getMeasurement();
    time = micros() - time;
 
    orientation_t *o =
        AHRSupdate(m.gx, m.gy, m.gz,
                   m.ax, m.ay, m.az,
-                  m.mx, m.my, -m.mz,
+                  m.mx, m.mz, m.my,
                   time/1e6);
 
    if (isnan(o->q0)) { // let's reset
