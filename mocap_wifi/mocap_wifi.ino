@@ -5,10 +5,25 @@
 #include <LSM9DS0.h>
 #include <ahrs.h>
 
+#include <math.h>
+#include <EEPROM.h>
+
+#define MAGIC 0x33
+
 // These are the interrupt and control pins
 Adafruit_CC3000 cc3000 =  Adafruit_CC3000(10,11,13,SPI_CLOCK_DIVIDER);
 Adafruit_CC3000_Client client;
 LSM9DS0 sen;
+float inf = INFINITY;
+typedef struct cal {
+ float lx, hx, ly, hy, lz, hz;
+ float total_max, total_min;
+ float offset_x, offset_y, offset_z,
+       scale_x, scale_y, scale_z;
+} cal_t;
+
+struct cal mag_cal = { inf, -inf, inf, -inf, inf, -inf, -inf, inf, 0,0,0,1,1,1 };
+
 
 #define BOOTCHECK(cmd,msg) \
   Serial.print(F(msg"\t..."));\
@@ -69,6 +84,14 @@ restart:
 
   sen.setMagFullScale(LSM9DS0_MAG_2_GAUSS);
   sen.setMagOutputRate(LSM9DS0_M_ODR_50);
+
+  if( EEPROM.read(0)-MAGIC == LSM9DS0_MAG_2_GAUSS ) 
+  {
+    char *p = (char*) &mag_cal;
+    for (uint32_t b=0; b<sizeof(struct cal); b++) 
+      p[b] = EEPROM.read(b+1);
+  }
+
 }
 
 unsigned long lastloop=0, time=0;
@@ -81,9 +104,13 @@ void loop(void)
   lastloop = micros();
   
   time = micros();
-  measurement_t m  = sen.getMeasurement();
+  lsm9d_measurement_t m  = sen.getMeasurement();
   time = micros() - time;
-  
+
+  m.mx = (m.mx - mag_cal.offset_x) * mag_cal.scale_x;
+  m.my = (m.my - mag_cal.offset_y) * mag_cal.scale_y;
+  m.mz = (m.mz - mag_cal.offset_z) * mag_cal.scale_z;
+
   orientation_t *o =
        AHRSupdate(m.gx, m.gy, m.gz,
                   m.ax, m.ay, m.az,
