@@ -36,8 +36,8 @@ void setup() {
   sen.setMagOutputRate(LSM9DS0_M_ODR_50);
 
   // clear the EEPROM
-  for (int i = 0; i < 512; i++)
-    EEPROM.write(i, 0);
+  //for (int i = 0; i < 512; i++)
+  //  EEPROM.write(i, 0);
 }
 
 
@@ -122,7 +122,7 @@ void loop() {
    lsm9d_measurement_t m = sen.getMeasurement();
 
    // for now only magnetometer
-   p("mag "); calibrate(m.mx,m.my,m.mz,&mag_cal); p("\n");
+   p("mag "); calibrate(m.mx,m.my,-m.mz,&mag_cal); p("\n");
 }
 
 

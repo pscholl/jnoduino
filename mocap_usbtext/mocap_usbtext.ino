@@ -26,11 +26,12 @@ void setup() {
 
   Serial.println(  sen.testConnection() ? "OK" : "FAILED");
 
+  sen.setGyroFullScale(2000);
   sen.setGyroOutputDataRate(LSM9DS0_RATE_95);
   sen.setGyroBandwidthCutOffMode(LSM9DS0_BW_LOW);
   sen.setGyroDataFilter(LSM9DS0_LOW_PASS);
-  sen.setGyroHighPassMode(LSM9DS0_HPM_NORMAL);
-  sen.setGyroHighPassFilterCutOffFrequencyLevel(LSM9DS0_HPCF10);
+  //sen.setGyroHighPassMode(LSM9DS0_HPM_NORMAL);
+  //sen.setGyroHighPassFilterCutOffFrequencyLevel(LSM9DS0_HPCF10);
 
   sen.setAccRate(LSM9DS0_ACC_RATE_100);
   sen.setAccFullScale(LSM9DS0_ACC_2G);
