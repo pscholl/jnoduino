@@ -1,134 +1,233 @@
 //=====================================================================================================
-// AHRS.c
-// S.O.H. Madgwick
-// 25th August 2010
+// MadgwickAHRS.c
 //=====================================================================================================
-// Description:
 //
-// Quaternion implementation of the 'DCM filter' [Mayhony et al].  Incorporates the magnetic distortion
-// compensation algorithms from my filter [Madgwick] which eliminates the need for a reference
-// direction of flux (bx bz) to be predefined and limits the effect of magnetic distortions to yaw
-// axis only.
+// Implementation of Madgwick's IMU and AHRS algorithms.
+// See: http://www.x-io.co.uk/node/8#open_source_ahrs_and_imu_algorithms
 //
-// User must define 'halfT' as the (sample period / 2), and the filter gains 'Kp' and 'Ki'.
-//
-// Global variables 'q0', 'q1', 'q2', 'q3' are the quaternion elements representing the estimated
-// orientation.  See my report for an overview of the use of quaternions in this application.
-//
-// User must call 'AHRSupdate()' every sample period and parse calibrated gyroscope ('gx', 'gy', 'gz'),
-// accelerometer ('ax', 'ay', 'ay') and magnetometer ('mx', 'my', 'mz') data.  Gyroscope units are
-// radians/second, accelerometer and magnetometer units are irrelevant as the vector is normalised.
+// Date			Author          Notes
+// 29/09/2011	SOH Madgwick    Initial release
+// 02/10/2011	SOH Madgwick	Optimised for reduced CPU load
+// 19/02/2012	SOH Madgwick	Magnetometer measurement is normalised
 //
 //=====================================================================================================
 
-//----------------------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------------------
 // Header files
 
 #include "ahrs.h"
-#include <Arduino.h>
 #include <math.h>
+#include <Arduino.h>
 
-//----------------------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------------------
 // Definitions
 
-#define Kp 2.0f     // proportional gain governs rate of convergence to accelerometer/magnetometer
-#define Ki 0.005f   // integral gain governs rate of convergence of gyroscope biases
+#define betaDef		0.95f		// 2 * proportional gain
+
+//---------------------------------------------------------------------------------------------------
+// Variable definitions
+
+volatile float beta = betaDef;								// 2 * proportional gain (Kp)
+
+//---------------------------------------------------------------------------------------------------
+// Function declarations
+
+float invSqrt(float x);
 
 //====================================================================================================
-// Function
-//====================================================================================================
+// Functions
 
-#define DEBUG 0
-#if DEBUG
-# define PRINTF(...) printf(__VA_ARGS__)
-#else
-# define PRINTF(...)
-#endif
+//---------------------------------------------------------------------------------------------------
+// AHRS algorithm update
 
-orientation_t*
-AHRSupdate(float gx, float gy, float gz, float ax, float ay, float az, float mx, float my, float mz, float halfT) {
-  static orientation_t o = {1,0,0,0,0,0,0};
-  float norm;
-  float hx, hy, hz, bx, bz;
-  float vx, vy, vz, wx, wy, wz;
-  float ex, ey, ez;
 
-  // auxiliary variables to reduce number of repeated operations
-  float q0q0 = o.q0*o.q0;
-  float q0q1 = o.q0*o.q1;
-  float q0q2 = o.q0*o.q2;
-  float q0q3 = o.q0*o.q3;
-  float q1q1 = o.q1*o.q1;
-  float q1q2 = o.q1*o.q2;
-  float q1q3 = o.q1*o.q3;
-  float q2q2 = o.q2*o.q2;   
-  float q2q3 = o.q2*o.q3;
-  float q3q3 = o.q3*o.q3;          
+orientation_t* AHRSupdate(float gx, float gy, float gz, float ax, float ay, float az, float mx, float my, float mz, float halfT) {
+  static orientation_t o = {1.,0.,0.,0.,0.,0.,0.};
+	float recipNorm;
+	float s0, s1, s2, s3;
+	float qDot1, qDot2, qDot3, qDot4;
+	float hx, hy;
+	float _2q0mx, _2q0my, _2q0mz, _2q1mx, _2bx, _2bz, _4bx, _4bz, _2q0, _2q1, _2q2, _2q3, _2q0q2, _2q2q3, q0q0, q0q1, q0q2, q0q3, q1q1, q1q2, q1q3, q2q2, q2q3, q3q3;
 
-  // normalise the measurements
-  norm = sqrt(ax*ax + ay*ay + az*az);       
-  ax = ax / norm;
-  ay = ay / norm;
-  az = az / norm;
-  PRINTF("a: %d %d %d %d\n",(int) (ax*1000), (int) (ay*1000), (int) (az*1000), (int) norm);
-  norm = sqrt(mx*mx + my*my + mz*mz);
-  mx = mx / norm;
-  my = my / norm;
-  mz = mz / norm;
-  PRINTF("m: %d %d %d %d\n",(int) (mx*1000), (int) (my*1000), (int) (mz*1000), (int) norm);
+  // compiler bug? make sure o is initialized
+  if (o.q0 == 0)
+    o.q0 = 1;
 
-  // compute reference direction of flux
-  hx = 2*mx*(0.5 - q2q2 - q3q3) + 2*my*(q1q2 - q0q3) + 2*mz*(q1q3 + q0q2);
-  hy = 2*mx*(q1q2 + q0q3) + 2*my*(0.5 - q1q1 - q3q3) + 2*mz*(q2q3 - q0q1);
-  hz = 2*mx*(q1q3 - q0q2) + 2*my*(q2q3 + q0q1) + 2*mz*(0.5 - q1q1 - q2q2);
-  bx = sqrt((hx*hx) + (hy*hy));
-  bz = hz;
+	// Use IMU algorithm if magnetometer measurement invalid (avoids NaN in magnetometer normalisation)
+	if((mx == 0.0f) && (my == 0.0f) && (mz == 0.0f)) {
+	//	//MadgwickAHRSupdateIMU(gx, gy, gz, ax, ay, az);
+  //  o.q1 = 9;
+		return &o;
+	}
 
-  // estimated direction of gravity and flux (v and w)
-  vx = 2*(q1q3 - q0q2);
-  vy = 2*(q0q1 + q2q3);
-  vz = q0q0 - q1q1 - q2q2 + q3q3;
-  wx = 2*bx*(0.5 - q2q2 - q3q3) + 2*bz*(q1q3 - q0q2);
-  wy = 2*bx*(q1q2 - q0q3) + 2*bz*(q0q1 + q2q3);
-  wz = 2*bx*(q0q2 + q1q3) + 2*bz*(0.5 - q1q1 - q2q2);
+	// Rate of change of quaternion from gyroscope
+	qDot1 = 0.5f * (-o.q1 * gx - o.q2 * gy - o.q3 * gz);
+	qDot2 = 0.5f * ( o.q0 * gx + o.q2 * gz - o.q3 * gy);
+	qDot3 = 0.5f * ( o.q0 * gy - o.q1 * gz + o.q3 * gx);
+	qDot4 = 0.5f * ( o.q0 * gz + o.q1 * gy - o.q2 * gx);
 
-  // error is sum of cross product between reference direction of fields and direction measured by sensors
-  ex = (ay*vz - az*vy) + (my*wz - mz*wy);
-  ey = (az*vx - ax*vz) + (mz*wx - mx*wz);
-  ez = (ax*vy - ay*vx) + (mx*wy - my*wx);
-  PRINTF("e: %d %d %d %d\n",(int) (ex*1000), (int) (ey*1000), (int) (ez*1000), (int) norm);
-  
-  // integral error scaled integral gain
-  o.exInt = o.exInt + ex*Ki;
-  o.eyInt = o.eyInt + ey*Ki;
-  o.ezInt = o.ezInt + ez*Ki;
-  
-  // adjusted gyroscope measurements
-  PRINTF("g: %d %d %d %d\n",(int) gx*1000, (int) gy*1000, (int) gz*1000, (int) norm);
-  gx = gx + Kp*ex + o.exInt;
-  gy = gy + Kp*ey + o.eyInt;
-  gz = gz + Kp*ez + o.ezInt;
-  PRINTF("g: %d %d %d %d\n",(int) gx*1000, (int) gy*1000, (int) gz*1000, (int) norm);
-  
-  // integrate quaternion rate and normalise
-  PRINTF("q: %d %d %d %d %d\n", (int)(q0*1000), (int)(q1*1000),(int)(q2*1000),(int)(q3*1000), (int) (norm*1000));
-  o.q0 += (-o.q1*gx - o.q2*gy - o.q3*gz)*halfT;
-  o.q1 += (o.q0*gx + o.q2*gz - o.q3*gy)*halfT;
-  o.q2 += (o.q0*gy - o.q1*gz + o.q3*gx)*halfT;
-  o.q3 += (o.q0*gz + o.q1*gy - o.q2*gx)*halfT;
-  PRINTF("halft: %d\n",(int) (halfT*1000000));
-  PRINTF("q: %d %d %d %d %d\n", (int)(q0*1000), (int)(q1*1000),(int)(q2*1000),(int)(q3*1000), (int) (norm*1000));
+	// Compute feedback only if accelerometer measurement valid (avoids NaN in accelerometer normalisation)
+	if(!((ax == 0.0f) && (ay == 0.0f) && (az == 0.0f))) {
 
-  // normalise quaternion
-  norm = sqrt(o.q0*o.q0 + o.q1*o.q1 + o.q2*o.q2 + o.q3*o.q3);
-  o.q0 /= norm;
-  o.q1 /= norm;
-  o.q2 /= norm;
-  o.q3 /= norm;
+		// Normalise accelerometer measurement
+		recipNorm = invSqrt(ax * ax + ay * ay + az * az);
+		ax *= recipNorm;
+		ay *= recipNorm;
+		az *= recipNorm;   
 
-  PRINTF("q: %d %d %d %d %d\n", (int)(q0*1000), (int)(q1*1000),(int)(q2*1000),(int)(q3*1000), (int) (norm*1000));
+		// Normalise magnetometer measurement
+		recipNorm = invSqrt(mx * mx + my * my + mz * mz);
+		mx *= recipNorm;
+		my *= recipNorm;
+		mz *= recipNorm;
+
+		// Auxiliary variables to avoid repeated arithmetic
+		_2q0mx = 2.0f * o.q0 * mx;
+		_2q0my = 2.0f * o.q0 * my;
+		_2q0mz = 2.0f * o.q0 * mz;
+		_2q1mx = 2.0f * o.q1 * mx;
+		_2q0 = 2.0f * o.q0;
+		_2q1 = 2.0f * o.q1;
+		_2q2 = 2.0f * o.q2;
+		_2q3 = 2.0f * o.q3;
+		_2q0q2 = 2.0f * o.q0 * o.q2;
+		_2q2q3 = 2.0f * o.q2 * o.q3;
+		q0q0 = o.q0 * o.q0;
+		q0q1 = o.q0 * o.q1;
+		q0q2 = o.q0 * o.q2;
+		q0q3 = o.q0 * o.q3;
+		q1q1 = o.q1 * o.q1;
+		q1q2 = o.q1 * o.q2;
+		q1q3 = o.q1 * o.q3;
+		q2q2 = o.q2 * o.q2;
+		q2q3 = o.q2 * o.q3;
+		q3q3 = o.q3 * o.q3;
+
+		// Reference direction of Earth's magnetic field
+		hx = mx * q0q0 - _2q0my * o.q3 + _2q0mz * o.q2 + mx * q1q1 + _2q1 * my * o.q2 + _2q1 * mz * o.q3 - mx * q2q2 - mx * q3q3;
+		hy = _2q0mx * o.q3 + my * q0q0 - _2q0mz * o.q1 + _2q1mx * o.q2 - my * q1q1 + my * q2q2 + _2q2 * mz * o.q3 - my * q3q3;
+		_2bx = sqrt(hx * hx + hy * hy);
+		_2bz = -_2q0mx * o.q2 + _2q0my * o.q1 + mz * q0q0 + _2q1mx * o.q3 - mz * q1q1 + _2q2 * my * o.q3 - mz * q2q2 + mz * q3q3;
+		_4bx = 2.0f * _2bx;
+		_4bz = 2.0f * _2bz;
+
+		// Gradient decent algorithm corrective step
+		s0 = -_2q2 * (2.0f * q1q3 - _2q0q2 - ax) + _2q1 * (2.0f * q0q1 + _2q2q3 - ay) - _2bz * o.q2 * (_2bx * (0.5f - q2q2 - q3q3) + _2bz * (q1q3 - q0q2) - mx) + (-_2bx * o.q3 + _2bz * o.q1) * (_2bx * (q1q2 - q0q3) + _2bz * (q0q1 + q2q3) - my) + _2bx * o.q2 * (_2bx * (q0q2 + q1q3) + _2bz * (0.5f - q1q1 - q2q2) - mz);
+		s1 = _2q3 * (2.0f * q1q3 - _2q0q2 - ax) + _2q0 * (2.0f * q0q1 + _2q2q3 - ay) - 4.0f * o.q1 * (1 - 2.0f * q1q1 - 2.0f * q2q2 - az) + _2bz * o.q3 * (_2bx * (0.5f - q2q2 - q3q3) + _2bz * (q1q3 - q0q2) - mx) + (_2bx * o.q2 + _2bz * o.q0) * (_2bx * (q1q2 - q0q3) + _2bz * (q0q1 + q2q3) - my) + (_2bx * o.q3 - _4bz * o.q1) * (_2bx * (q0q2 + q1q3) + _2bz * (0.5f - q1q1 - q2q2) - mz);
+		s2 = -_2q0 * (2.0f * q1q3 - _2q0q2 - ax) + _2q3 * (2.0f * q0q1 + _2q2q3 - ay) - 4.0f * o.q2 * (1 - 2.0f * q1q1 - 2.0f * q2q2 - az) + (-_4bx * o.q2 - _2bz * o.q0) * (_2bx * (0.5f - q2q2 - q3q3) + _2bz * (q1q3 - q0q2) - mx) + (_2bx * o.q1 + _2bz * o.q3) * (_2bx * (q1q2 - q0q3) + _2bz * (q0q1 + q2q3) - my) + (_2bx * o.q0 - _4bz * o.q2) * (_2bx * (q0q2 + q1q3) + _2bz * (0.5f - q1q1 - q2q2) - mz);
+		s3 = _2q1 * (2.0f * q1q3 - _2q0q2 - ax) + _2q2 * (2.0f * q0q1 + _2q2q3 - ay) + (-_4bx * o.q3 + _2bz * o.q1) * (_2bx * (0.5f - q2q2 - q3q3) + _2bz * (q1q3 - q0q2) - mx) + (-_2bx * o.q0 + _2bz * o.q2) * (_2bx * (q1q2 - q0q3) + _2bz * (q0q1 + q2q3) - my) + _2bx * o.q1 * (_2bx * (q0q2 + q1q3) + _2bz * (0.5f - q1q1 - q2q2) - mz);
+		recipNorm = invSqrt(s0 * s0 + s1 * s1 + s2 * s2 + s3 * s3); // normalise step magnitude
+		s0 *= recipNorm;
+		s1 *= recipNorm;
+		s2 *= recipNorm;
+		s3 *= recipNorm;
+
+		// Apply feedback step
+		qDot1 -= beta * s0;
+		qDot2 -= beta * s1;
+		qDot3 -= beta * s2;
+		qDot4 -= beta * s3;
+	}
+
+	// Integrate rate of change of quaternion to yield quaternion
+	o.q0 += qDot1 * halfT;
+	o.q1 += qDot2 * halfT;
+	o.q2 += qDot3 * halfT;
+	o.q3 += qDot4 * halfT;
+
+	// Normalise quaternion
+	recipNorm = invSqrt(o.q0 * o.q0 + o.q1 * o.q1 + o.q2 * o.q2 + o.q3 * o.q3);
+	o.q0 *= recipNorm;
+	o.q1 *= recipNorm;
+	o.q2 *= recipNorm;
+	o.q3 *= recipNorm;
 
   return &o;
+}
+
+//---------------------------------------------------------------------------------------------------
+// IMU algorithm update
+
+//void MadgwickAHRSupdateIMU(float gx, float gy, float gz, float ax, float ay, float az) {
+//	float recipNorm;
+//	float s0, s1, s2, s3;
+//	float qDot1, qDot2, qDot3, qDot4;
+//	float _2q0, _2q1, _2q2, _2q3, _4q0, _4q1, _4q2 ,_8q1, _8q2, q0q0, q1q1, q2q2, q3q3;
+//
+//	// Rate of change of quaternion from gyroscope
+//	qDot1 = 0.5f * (-q1 * gx - q2 * gy - q3 * gz);
+//	qDot2 = 0.5f * (q0 * gx + q2 * gz - q3 * gy);
+//	qDot3 = 0.5f * (q0 * gy - q1 * gz + q3 * gx);
+//	qDot4 = 0.5f * (q0 * gz + q1 * gy - q2 * gx);
+//
+//	// Compute feedback only if accelerometer measurement valid (avoids NaN in accelerometer normalisation)
+//	if(!((ax == 0.0f) && (ay == 0.0f) && (az == 0.0f))) {
+//
+//		// Normalise accelerometer measurement
+//		recipNorm = invSqrt(ax * ax + ay * ay + az * az);
+//		ax *= recipNorm;
+//		ay *= recipNorm;
+//		az *= recipNorm;   
+//
+//		// Auxiliary variables to avoid repeated arithmetic
+//		_2q0 = 2.0f * q0;
+//		_2q1 = 2.0f * q1;
+//		_2q2 = 2.0f * q2;
+//		_2q3 = 2.0f * q3;
+//		_4q0 = 4.0f * q0;
+//		_4q1 = 4.0f * q1;
+//		_4q2 = 4.0f * q2;
+//		_8q1 = 8.0f * q1;
+//		_8q2 = 8.0f * q2;
+//		q0q0 = q0 * q0;
+//		q1q1 = q1 * q1;
+//		q2q2 = q2 * q2;
+//		q3q3 = q3 * q3;
+//
+//		// Gradient decent algorithm corrective step
+//		s0 = _4q0 * q2q2 + _2q2 * ax + _4q0 * q1q1 - _2q1 * ay;
+//		s1 = _4q1 * q3q3 - _2q3 * ax + 4.0f * q0q0 * q1 - _2q0 * ay - _4q1 + _8q1 * q1q1 + _8q1 * q2q2 + _4q1 * az;
+//		s2 = 4.0f * q0q0 * q2 + _2q0 * ax + _4q2 * q3q3 - _2q3 * ay - _4q2 + _8q2 * q1q1 + _8q2 * q2q2 + _4q2 * az;
+//		s3 = 4.0f * q1q1 * q3 - _2q1 * ax + 4.0f * q2q2 * q3 - _2q2 * ay;
+//		recipNorm = invSqrt(s0 * s0 + s1 * s1 + s2 * s2 + s3 * s3); // normalise step magnitude
+//		s0 *= recipNorm;
+//		s1 *= recipNorm;
+//		s2 *= recipNorm;
+//		s3 *= recipNorm;
+//
+//		// Apply feedback step
+//		qDot1 -= beta * s0;
+//		qDot2 -= beta * s1;
+//		qDot3 -= beta * s2;
+//		qDot4 -= beta * s3;
+//	}
+//
+//	// Integrate rate of change of quaternion to yield quaternion
+//	q0 += qDot1 * (1.0f / sampleFreq);
+//	q1 += qDot2 * (1.0f / sampleFreq);
+//	q2 += qDot3 * (1.0f / sampleFreq);
+//	q3 += qDot4 * (1.0f / sampleFreq);
+//
+//	// Normalise quaternion
+//	recipNorm = invSqrt(q0 * q0 + q1 * q1 + q2 * q2 + q3 * q3);
+//	q0 *= recipNorm;
+//	q1 *= recipNorm;
+//	q2 *= recipNorm;
+//	q3 *= recipNorm;
+//}
+
+//---------------------------------------------------------------------------------------------------
+// Fast inverse square-root
+// See: http://en.wikipedia.org/wiki/Fast_inverse_square_root
+
+float invSqrt(float x) {
+	float halfx = 0.5f * x;
+	float y = x;
+	long i = *(long*)&y;
+	i = 0x5f3759df - (i>>1);
+	y = *(float*)&i;
+	y = y * (1.5f - (halfx * y * y));
+	return y;
 }
 
 //====================================================================================================
