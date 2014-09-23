@@ -105,12 +105,16 @@ restart:
   pinMode(A2, INPUT); // turns green LED off
 }
 
-unsigned long lighton=0, time=0;
 #define RATE_S (1/100.)
+#define LIGHTON_DELAY 50
+unsigned long lighton=0, time=0, lighton_delay=LIGHTON_DELAY;
 
 void loop(void)
 {
-  pinMode(A2, (lighton=!lighton) ? INPUT : OUTPUT);
+  if (lighton_delay++ > LIGHTON_DELAY) {
+    pinMode(A2, (lighton=!lighton) ? INPUT : OUTPUT);
+    lighton_delay = 0;
+  }
 
   lsm9d_measurement_t m  = sen.getMeasurement();
 
@@ -133,6 +137,7 @@ void loop(void)
      o->q0 = 1;
      o->q1 = o->q2 = o->q3 = 0;
      o->exInt = o->eyInt = o->ezInt = 0;
+     if (lighton_delay < LIGHTON_DELAY/2) lighton_delay = LIGHTON_DELAY/2;
      return;
   }
 

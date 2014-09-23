@@ -92,5 +92,5 @@ tools.dfuprogrammer.bootloader.pattern="{cmd.path}" {build.mcu} flash {upload.ve
 # USB Default Flags
 # Default blank usb manufacturer will be filled it at compile time
 # - from numeric vendor ID, set to Unknown otherwise
-build.usb_manufacturer=
+build.usb_manufacturer=TU Darmstadt
 build.usb_flags=-DUSB_VID={build.vid} -DUSB_PID={build.pid} '-DUSB_MANUFACTURER={build.usb_manufacturer}' '-DUSB_PRODUCT={build.usb_product}'
