@@ -16,12 +16,22 @@
 ** SOFTWARE.  
 */
 
-#include "Platform.h"
 #include "USBAPI.h"
 #include "atmel_bootloader.h"
 #include <avr/wdt.h>
 
-bool WEAK CDC_Setup(Setup& setup)
+typedef struct
+{
+	u32	dwDTERate;
+	u8	bCharFormat;
+	u8 	bParityType;
+	u8 	bDataBits;
+	u8	lineState;
+} LineInfo;
+
+static volatile LineInfo _usbLineInfo = { 57600, 0x00, 0x00, 0x00, 0x00 };
+
+bool CDC_Setup(Setup& setup)
 {
 	u8 r = setup.bRequest;
 	u8 requestType = setup.bmRequestType;

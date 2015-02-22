@@ -127,9 +127,11 @@ void loop() {
    lsm9d_measurement_t m = sen.getMeasurement();
 
    if (!mag_calibration_done) {
-    p("mag "); mag_calibration_done = mag_calibrate(m.mx,m.my,-m.mz,&mag_cal); p("\n");
+    p("mag "); mag_calibration_done = mag_calibrate(m.mx,m.my,m.mz,&mag_cal); p("\n");
    }
    else { /* do the acc calibration */
+    p("all done\n");
+    return ;
     p("starting acceleration calibration\n");
     p("x axis high, press any key\n");while(!Serial.available()); Serial.read(); acc_cal.hx = sen.getMeasurement().ax;
     p("x axis low, press any key\n"); while(!Serial.available()); Serial.read(); acc_cal.lx = sen.getMeasurement().ax;

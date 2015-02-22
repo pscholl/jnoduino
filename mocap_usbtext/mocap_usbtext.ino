@@ -28,6 +28,8 @@ void setup() {
   pinMode(A2, OUTPUT);   // turns green LED on
   digitalWrite(A2, LOW); // wire to GND
 
+  sen.initialize();
+
   Serial.println(  sen.testConnection() ? "OK" : "FAILED");
 
   sen.setGyroFullScale(2000);
@@ -69,42 +71,72 @@ void setup() {
   pinMode(A2, INPUT); // turns green LED off
 }
 
-unsigned long lighton=0;
+unsigned long lighton=0, time=0;
+static lsm9d_measurement_t m;
 
+void magcal();
 void loop() {
    pinMode(A2, lighton=!lighton ? INPUT : OUTPUT);
 
-   lsm9d_measurement_t m = sen.getMeasurement();
-
-   m.mx = (m.mx - mag_cal.offset_x) * mag_cal.scale_x;
-   m.my = (m.my - mag_cal.offset_y) * mag_cal.scale_y;
-   m.mz = (m.mz - mag_cal.offset_z) * mag_cal.scale_z;
-
-   //m.ax = (m.ax - acc_cal.offset_x) * acc_cal.scale_x;
-   //m.ay = (m.ay - acc_cal.offset_y) * acc_cal.scale_y;
-   //m.az = (m.az - acc_cal.offset_z) * acc_cal.scale_z;
+   time = micros(); sen.updateMeasurement(&m); time = micros() - time;
+   m.mz = -m.mz;
+   magcal();
 
    orientation_t *o =
        AHRSupdate(m.gx, m.gy, m.gz,
                   m.ax, m.ay, m.az,
-                  m.mx, m.my, -m.mz,
-                  1/200.);
+                  m.mx, m.my, m.mz,
+                  1/95.); // half gyro sample rate
 
-//   p(time/1.e6);p("\t");
-//   p(m.gx);p("\t");p(m.gy);p("\t");p(m.gz);p("\t");
-//   p(m.ax);p("\t");p(m.ay);p("\t");p(m.az);p("\t");
-//   p(m.mx);p("\t");p(m.my);p("\t");p(m.mz);p("\n");
+   //p(time/1.e6);p("\t");
+   p(m.gx);p("\t");p(m.gy);p("\t");p(m.gz);p("\t");
+   p(m.mx);p("\t");p(m.my);p("\t");p(m.mz);p("\t");
+   p(m.ax);p("\t");p(m.ay);p("\t");p(m.az);
+   p("\n");
 
    if (isnan(o->q0)) { // let's reset
+     p ("reset\n");
      o->q0 = 1;
      o->q1 = o->q2 = o->q3 = 0;
      o->exInt = o->eyInt = o->ezInt = 0;
-
      return;
    }
 
    p(o->q0); p("\t");
    p(o->q1); p("\t");
    p(o->q2); p("\t");
-   p(o->q3); p("\n");
+   p(o->q3);
+   p("\n");
+}
+
+//static float px=inf,mx=-inf, py=inf,my=-inf, pz=inf,mz=-inf;
+static float px=3.,mx=-.3, py=3,my=-3, pz=3,mz=-3;
+void magcal() {
+  float offset_x, offset_y, offset_z,
+        scale_x, scale_y, scale_z,
+        total_max, total_min;
+
+  mx = m.mx>mx ? mx + 0.05 : mx;
+  my = m.my>my ? my + 0.05 : my;
+  mz = m.mz>mz ? mz + 0.05 : mz;
+  px = m.mx<px ? px - 0.05 : px;
+  py = m.my<py ? py - 0.05 : py;
+  pz = m.mz<pz ? pz - 0.05 : pz;
+
+  offset_x = (mx + px) / 2.;
+  offset_y = (my + py) / 2.;
+  offset_z = (mz + pz) / 2.;
+
+  total_max = max(px, max(py, pz));
+  total_min = min(mx, min(my, mz));
+
+  scale_x = (total_max - offset_x) / (mx - offset_x);
+  scale_y = (total_max - offset_y) / (my - offset_y);
+  scale_z = (total_max - offset_z) / (mz - offset_z);
+
+  m.mx = (m.mx - offset_x) * scale_x;
+  m.my = (m.my - offset_y) * scale_y;
+  m.mz = (m.mz - offset_z) * scale_z;
+
+  p("s"); p(scale_y); p("\t"); p(offset_y); p("\n");
 }

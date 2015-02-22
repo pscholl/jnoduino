@@ -1869,6 +1869,35 @@ int16_t LSM9DS0::getAcclerationZ() {
   return ((int16_t*) buffer)[0];
 }
 
+void LSM9DS0::updateMeasurement(lsm9d_measurement_t *m) {
+  int16_t *val = (int16_t*) buffer;
+
+  /* this blocks the function for the given sampling rate */
+  while( !getGyroXYZDataAvailable() )
+    ;
+
+  I2Cdev::readBytes(devAddrGyro, BIT_AUTOINCREMENT|LSM9DS0_RA_OUT_X_L, 6, buffer);
+  m->gx = gyr_scale * val[0] * M_PI/180.;
+  m->gy = gyr_scale * val[1] * M_PI/180.;
+  m->gz = gyr_scale * val[2] * M_PI/180.;
+
+  /* reading the accelerometer and magnetometer is done only if neccesary */
+  while( getAccXYZDataAvailable() ) {
+    I2Cdev::readBytes(devAddrMagAcc, BIT_AUTOINCREMENT|LSM9DS0_RA_OUT_X_A, 6, buffer);
+    m->ax = acc_scale * val[0];
+    m->ay = acc_scale * val[1];
+    m->az = acc_scale * val[2];
+  }
+
+  while( getMagXYZDataAvailable() ) {
+    I2Cdev::readBytes(devAddrMagAcc, BIT_AUTOINCREMENT|LSM9DS0_RA_OUT_X_M, 6, buffer);
+    m->mx = mag_scale * val[0];
+    m->my = mag_scale * val[1];
+    m->mz = mag_scale * val[2];
+  }
+
+}
+
 lsm9d_measurement_t LSM9DS0::getMeasurement() {
   lsm9d_measurement_t m;
   int16_t *val = (int16_t*) buffer;

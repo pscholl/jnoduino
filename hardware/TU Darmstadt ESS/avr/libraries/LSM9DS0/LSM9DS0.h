@@ -438,6 +438,7 @@ class LSM9DS0 {
         bool testConnection();
 
         lsm9d_measurement_t getMeasurement();
+        void updateMeasurement(lsm9d_measurement_t *m);
 
         // WHO_AM_I register, read-only
         uint8_t getDeviceID();

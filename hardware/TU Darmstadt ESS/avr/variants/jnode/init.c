@@ -1,4 +1,5 @@
 #include <avr/power.h>
+#include <avr/wdt.h>
 #include <util/delay.h>
 
 void initVariant() {
@@ -10,8 +11,11 @@ void initVariant() {
   MCUCR = (1<<JTD);
   MCUCR = (1<<JTD);
 
-  // reset sensors on reboot, PC5 controls sensor power
-  DDRC |= (1<<5);
-  _delay_ms(100);
-  DDRC &= ~(1<<5);
+  // reset sensors on reboot, PC6 controls sensor power
+  DDRC  |= (1<<6);
+  PORTC |= (1<<6);
+  _delay_us(500);
+  PORTC &= ~(1<<6);
+  DDRC  &= (1<<6);
+  _delay_us(500);
 }
