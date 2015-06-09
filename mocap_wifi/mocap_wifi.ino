@@ -124,29 +124,29 @@ void loop(void)
 
 static float px=3.,mx=-.3, py=3,my=-3, pz=3,mz=-3;
 void magcal() {
-  float offset_x, offset_y, offset_z,
-        scale_x, scale_y, scale_z,
-        total_max, total_min;
-
-  mx = m.mx>mx ? mx + 0.05 : mx;
-  my = m.my>my ? my + 0.05 : my;
-  mz = m.mz>mz ? mz + 0.05 : mz;
-  px = m.mx<px ? px - 0.05 : px;
-  py = m.my<py ? py - 0.05 : py;
-  pz = m.mz<pz ? pz - 0.05 : pz;
-
-  offset_x = (mx + px) / 2.;
-  offset_y = (my + py) / 2.;
-  offset_z = (mz + pz) / 2.;
-
-  total_max = max(px, max(py, pz));
-  total_min = min(mx, min(my, mz));
-
-  scale_x = (total_max - offset_x) / (mx - offset_x);
-  scale_y = (total_max - offset_y) / (my - offset_y);
-  scale_z = (total_max - offset_z) / (mz - offset_z);
-
-  m.mx = (m.mx - offset_x) * scale_x;
-  m.my = (m.my - offset_y) * scale_y;
-  m.mz = (m.mz - offset_z) * scale_z;
+//  float offset_x, offset_y, offset_z,
+//        scale_x, scale_y, scale_z,
+//        total_max, total_min;
+//
+//  mx = m.mx>mx ? mx + 0.05 : mx;
+//  my = m.my>my ? my + 0.05 : my;
+//  mz = m.mz>mz ? mz + 0.05 : mz;
+//  px = m.mx<px ? px - 0.05 : px;
+//  py = m.my<py ? py - 0.05 : py;
+//  pz = m.mz<pz ? pz - 0.05 : pz;
+//
+//  offset_x = (mx + px) / 2.;
+//  offset_y = (my + py) / 2.;
+//  offset_z = (mz + pz) / 2.;
+//
+//  total_max = max(px, max(py, pz));
+//  total_min = min(mx, min(my, mz));
+//
+//  scale_x = (total_max - offset_x) / (mx - offset_x);
+//  scale_y = (total_max - offset_y) / (my - offset_y);
+//  scale_z = (total_max - offset_z) / (mz - offset_z);
+//
+//  m.mx = (m.mx - offset_x) * scale_x;
+//  m.my = (m.my - offset_y) * scale_y;
+//  m.mz = (m.mz - offset_z) * scale_z;
 }

@@ -1,3 +1,4 @@
+#include <Wire.h>
 #include <ahrs.h>
 #include <I2Cdev.h>
 #include <LSM9DS0.h>
