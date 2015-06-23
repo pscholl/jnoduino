@@ -1,0 +1,3 @@
+[submodule "hardware/TU Darmstadt ESS/avr/libraries"]
+	path = hardware/TU Darmstadt ESS/avr/libraries
+	url = git@github.com:pscholl/Adafruit_CC3000_Library.git
