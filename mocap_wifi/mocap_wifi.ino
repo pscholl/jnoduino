@@ -96,7 +96,7 @@ void loop(void)
   }
 
   m = sen.getMeasurement();
-  m.mz = -m.mz; magcal();
+  //m.mz = -m.mz; magcal();
 
   orientation_t *o =
        AHRSupdate(m.gx, m.gy, m.gz,
@@ -104,6 +104,8 @@ void loop(void)
                   m.mx, m.my, m.mz,
                   RATE_S/2); // sampling rate, XXX: make sure to match sensor!
   o->timestamp = micros();
+
+  Serial.println(".");
 
   if (isnan(o->q0)) { // let's reset
      o->q0 = 1;

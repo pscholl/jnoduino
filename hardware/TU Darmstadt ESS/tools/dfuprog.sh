@@ -1,5 +1,4 @@
 #!/usr/bin/env bash 
-
 DIRECTORY=$(dirname "$0")
 TIMEOUT=20
 RET=1
